@@ -1,0 +1,15 @@
+h1{
+    margin : 30px;
+    text-align: center;
+}
+button{
+    position:relative;
+    margin-top:50%;
+}
+p{
+    text-align: center;
+    font-size: 20px;
+}
+body{
+    background-color: darkcyan;
+}

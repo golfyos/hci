@@ -1,0 +1,482 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta content="text/html" charset="utf-8">
+        <title> Reserve Room At LC-2</title>
+        
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="scheduleCSS.css"> 
+        <link rel="stylesheet" type="text/css" href="tab.css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="tab.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="tcal.css"/>
+	    <script type="text/javascript" src="tcal.js"></script>
+
+
+        <link href="dialogCSS.css" rel="stylesheet">
+        <script src="dialogJS.js"></script>
+
+
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrapS.css">
+        
+        <link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href="css/sty.css">	
+        
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <!--Font Thai-->
+        <link href="https://fonts.googleapis.com/css?family=Athiti:300|Mitr:200" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Prompt:200,400" rel="stylesheet">
+
+        
+        <link rel="prefetch" href="images/zoom.png">
+        <script src="js/html5shiv.js"></script>
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script src="js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="fancybox/jquery.fancybox.pack-v=2.1.5.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+        $(document).ready(function(e) {
+            var lis = $('.nav > li');
+            menu_focus( lis[0], 1 );
+            
+            $(".fancybox").fancybox({
+                padding: 10,
+                helpers: {
+                    overlay: {
+                        locked: false
+                    }
+                }
+            });
+        
+        });
+        </script>
+        
+    
+    </head>
+    <body>
+        
+<div class="navbar navbar-fixed-top" data-activeslide="2" style="background-color:#FFF">
+		<div class="container">
+		
+			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+			
+			
+			<div class="nav-collapse collapse navbar-responsive-collapse" style="background-color:#FFF">
+				<ul class="nav row" style="background-color:#FFF">
+                	
+<li data-slide="1" class="col-12 col-sm-2" style="background-color:#FFF"><a id="menu-link-1" href="#slide-1" > <span class="text" style="font-size:20px;font-family: 'Mitr', sans-serif;" >หน้าหลัก</span></a></li>
+
+<li data-slide="2" class="col-12 col-sm-2"><a id="menu-link-2" href="./index.html"  > <span class="text" style="font-size:20px;font-family: 'Mitr', sans-serif;">เกี่ยวกับ</span></a></li>
+
+<li data-slide="3" class="col-12 col-sm-4"><a id="menu-link-3" href="#slide-3" > <span class="text" style="font-size:20px;font-family: 'Mitr', sans-serif;">วิธีการจองและยกเลิก</span></a></li>
+
+<li data-slide="6" class="col-12 col-sm-2"><a id="menu-link-5" href="#slide-5"><span class="text" style="font-size:20px;font-family: 'Mitr', sans-serif;">ติดต่อ</span></a></li>
+
+<li data-slide="1" class="col-12 col-sm-2"><a id="menu-link-1" href="#slide-1" > <span class="text" style="font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a></li>
+					
+				
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</div><!-- /.navbar -->
+
+
+        <h1>เลือกห้องที่ต้องการจอง <a href="./index.html#slide-3"> <img src="img/qmark.png" width="25" height="25" border="0"></a> </h1>
+    
+      <div class="container">
+          <div class="tab-example">
+                <ul class="tabs">
+                    <li style="font-size:28px" class="tab-link current" data-tab="tab1">บร.2</li>
+                    <li style="font-size:28px" class="tab-link" data-tab="tab2">อาคารอื่นๆ </li>
+
+                </ul>
+            <div class="wrapperHalf">
+                <div class="tab-contents">
+                    <div class="tab-pane current" id="tab1">
+                        <div class"row">
+                            <div class="col-md-3">
+                            <!--วันที่: <input type="text">-->
+                            วันที่: <input type="text" name="date" class="tcal" style="background-color:white" value="30/11/2559" />
+                                <button type="button" data-toggle="datepicker">
+
+                            </div>
+                            <div class="col-md-3">
+                            ห้อง: 
+                            <select>
+                                <option value="all">ทุกห้อง </option>
+                                <option value="103">107 </option>
+                                <option value="207">111 </option>
+                                <option value="211">213 </option>
+                                <option value="304">304 </option>
+                                <option value="107">301/1 </option>
+                                <option value="111">301/2 </option>
+                                <option value="111">301/3 </option>
+                                <option value="111">ห้องประชุม1 </option>
+                                <option value="111">ห้องประชุม2 </option>
+                            </select></div>
+                         <div class="col-md-5"> 
+                             <div class="wrapperR">
+                            <button class="buttonHelp"><img src="img/glass.png" style="margin-bottom:3px" width="20" height="20"> ระบบช่วยค้นหาห้อง</button>
+                            </div>
+                         </div>
+                         <div class="col-md-1"> </div>
+
+                        </div>
+                        
+
+                        <br>
+                        <br>
+                        <br>
+                    <div class="left">
+                        <table>
+                            <tr>
+                                <th width="12%"><div class="wrapperR">ห้อง\เวลา</th></div>
+                                <th>8:00 - 9:30</th>
+                                <th>9:30 - 11:00</th>
+                                <th>11:00 - 12:30</th>
+                                <th>พัก</th>
+                                <th>13:30 - 15:00</th>
+                                <th>15:00 - 16:30</th>
+                                <th>16:30 - 18:00</th>
+                            </tr>
+                            
+                            <tr>
+                                <td><div class="wrapperR">107 <img name="107" onclick="cc(this.name)"  src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
+                                <br>
+                               <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 60</td>
+                                </div>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+
+                            </tr>
+                            <tr>
+                                <td><div class="wrapperR">111 <img name="111" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
+                                <br>
+                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 50</td>
+                                </div>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                            </tr>
+                            <tr>
+                                <td><div class="wrapperR">213 <img name="213" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
+                                <br>
+                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 50</td>
+                                </div>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                            </tr>
+                            <tr>
+                                <td><div class="wrapperR">304 <img name="304" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
+                                <br>
+                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 60</td>
+                                </div>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                            </tr>
+                            <tr>
+                                <td><div class="wrapperR">301/1 <img name="301/1" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
+                                <br>
+                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 30</td>
+                                </div>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                            </tr>
+                            <tr>
+                                <td><div class="wrapperR">301/2 <img name="301/2"onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
+                                <br>
+                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 35</td>
+                                </div>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                            </tr>
+                            <tr>
+                                <td><div class="wrapperR">301/3 <img name="301/3" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
+                                <br>
+                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 35</td>
+                                </div>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                            </tr>
+                            <tr>
+                                <td><div class="wrapperR">ประชุม1 <img name="ประชุม1" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
+                                <br>
+                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 20</td>
+                                </div>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                            </tr>
+                            <tr>
+                                <td><div class="wrapperR">ประชุม2 <img name="ประชุม2" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
+                                <br>
+                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 30</td>
+                                </div>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                            </tr>
+                        </table>
+                        <br>
+
+                        <div id="id02" class="modal">
+                        <form class="modal-content animate" action="">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+                                <h1><p id="headerD"></p></h1>
+                                <hr>
+                            </div>
+                               
+
+                            <div class="containBig">
+                                <img src="img/floor.png"><br><br>
+                                <img src="img/pickf.png">
+                            </div>
+
+                        </form> <!-- form id02-->
+                                
+                           
+                        </div> <!-- id02 modal-->
+                        
+                        
+                        <p id="note"> ***กรุณาคลิกที่ช่องว่าง ตามเวลาที่ต้องการ หรือ คลิกอีกครั้งเพื่อยกเลิก<p>
+                        </div>
+
+                        <div class="right">
+                            <br>
+                            <img src="img/emptysqr.png" width="60px" height="60px"><br><p id="textR">สามารถจองได้</p>
+                            <br>
+                            <img src="img/unmsqr.png" width="60px" height="60px"><br><p id="textR">ไม่สามารถจองได้</p>
+                        </div>
+                    </div> <!--end tab pane1-->
+
+                    <!-- start tab pane2-->
+                    <div class="tab-pane pane2" id="tab2">
+                        <h2>แบบฟอร์มแจ้งความประสงค์ในการใช้ห้องบรรยาย</h2><br>
+                        
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-4">
+                            *ประจำภาคเรียนที่ 
+                                <select name="select">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3/summer</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                            *ปีการศึกษา 
+                            <select name="select">
+                                <option>2559</option>
+                                <option>2560</option>
+                                <option>2561</option>
+                            </select>
+                            </div>
+                            <div class="col-md-3"></div>
+                    </div>
+                            <br>
+                    <div class="row"><!--row 1-->
+                         <div class="col-md-1"></div>
+                         <div class="col-md-4">
+                            *จำนวนผู้ใช้ <input type="text" maxlength="3" size="10" placeholder=" Ex. 20" required> คน    
+                            </div>
+                            <div class="col-md-4">
+                            *อาคารเรียน
+                                <select name="select">
+                                    <option>บร.1</option>
+                                    <option>บร.3</option>
+                                    <option>บร.4</option>
+                                    <option>บร.5</option>
+                                    <option>SC Building</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3"></div>
+                    </div> <!-- end row 1-->
+                            <br>
+                    <div class="row"> <!-- row 2-->
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                            *ใช้ในการเรียนการสอน/การสอบ วิชา: <input type="text" size="10" placeholder=" Ex. CS123 ">
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div> <!-- end row 2-->
+                    
+                        <form>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-10">
+                                <input type="radio" name="gender" value="always"> ประจำ (วันสอนต้องเป็นไปตาม section ที่แจ้งไปยังสำนักทะเบียนเท่านั้น)<br>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-10">
+                            <input type="radio" name="gender" value="some"> 
+                                สอนชดเชยเป็นครั้งคราวใน วันที่ <input type="text" size="10" name="date" class="tcal" style="background-color:white" value="" />
+                                เวลาสอนตั้งแต่:
+                                <select class="selectTime" name="select">
+                                    <option>8:00</option>
+                                    <option>9:30</option>
+                                    <option>11:00</option>
+                                    <option>12:30</option>
+                                    <option>13:30</option>
+                                    <option>15:00</option>
+                                    <option>16:30</option>
+                                </select>
+                                ถึง:
+                                <select class="selectTime" name="select">
+                                    <option>9:30</option>
+                                    <option>11:00</option>
+                                    <option>12:30</option>
+                                    <option>13:30</option>
+                                    <option>15:00</option>
+                                    <option>16:30</option>
+                                    <option>18:00</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-10">
+                                <input type="radio" name="gender" value="choose">
+                                สอบใน วันที่ <input type="text" size="10"name="date" class="tcal" style="background-color:white" value="" />
+                                เวลาสอบตั้งแต่:
+                                    <select class="selectTime" name="select">
+                                        <option>8:00</option>
+                                        <option>9:30</option>
+                                        <option>11:00</option>
+                                        <option>12:30</option>
+                                        <option>13:30</option>
+                                        <option>15:00</option>
+                                        <option>16:30</option>
+                                    </select>
+                                    ถึง:
+                                    <select class="selectTime" name="select">
+                                        <option>9:30</option>
+                                        <option>11:00</option>
+                                        <option>12:30</option>
+                                        <option>13:30</option>
+                                        <option>15:00</option>
+                                        <option>16:30</option>
+                                        <option>18:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-1"></div>
+                            <div class="col-md-11"> 
+                               ต้องการอุปกรณ์เสริม(ถ้ามี) <input type="text" size="55" placeholder=" Ex.ไมโครโฟน 2 ตัว"><br>
+                            </div>
+                        </div>
+                        <br><br><br>
+                        <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-11"> 
+                                    หมายเหตุ: เครื่องหมาย * คือ จำเป็นต้องกรอกข้อมูลในช่อง
+                                </div>
+                        </div>
+                </div> <!--end tab pane2-->
+            </div> <!--tab content-->
+            </div> <!-- halfwrapper-->
+      </div> <!--tab example-->
+      </div> <!--container-->
+      <hr>
+
+      
+      <div class="row">
+           <div class="col-md-4"> </div>
+           <div class="col-md-4"> 
+                <div class="wrapper">
+                    <button class="button button1" onclick="window.history.back()"> ย้อนกลับ </button> 
+                    <!--<button class="button button1"> ยืนยันการจอง </button>-->
+                    <button class="button button1" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ยืนยันการจอง</button>
+                    <div id="id01" class="modal">
+                        
+                    <form class="modal-content animate" action="confirm.html">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+                           <h1>ยืนยันตัวตน</h1>
+                            <hr>
+                        </div> <!-- imgcontainer -->
+                            <div class="containBig">  
+                                <!--<label><b>ชื่อผู้ใช้</b></label><br>-->
+                                <img src="img/user.png" style="margin-bottom:3px" width="20" height="20" alt="us" ><input class="inputTP" type="text" placeholder=" ชื่อผู้ใช้" name="uname" required>
+                                <br>
+                                <br> 
+                                <!--<label><b>รหัสผ่าน</b></label><br>-->
+                               <img src="img/password.png" style="margin-bottom:3px" width="20" height="20" alt="us" ><input class="inputTP" type="password" placeholder=" รหัสผ่าน" name="psw" required><br>
+                                <br>
+                                <button class="buttonD" type="submit">ลงชื่อเข้าใช้</button><br>
+                                <input class="inputTP" type="checkbox" checked="checked"><br>Remember me
+                            </div>  <!-- containBig-->
+                            <!--<div class="containBig" style="background-color:#f1f1f1">
+                                <button class="buttonD cancelbtn" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>-->
+                     </form>
+                    </div>  <!-- id01 -->
+                    
+
+                </div> <!--wrapper-->
+            </div> <!--col md 4 -->
+
+          <div class="col-md-4"></div>
+
+      </div> <!--row-->
+    
+    </body>
+</html>

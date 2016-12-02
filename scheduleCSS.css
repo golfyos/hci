@@ -1,0 +1,126 @@
+h1{
+    color: black;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    text-align: center;
+    
+}
+h2{
+    text-align: center;
+}
+body{
+    background-color: darkcyan;
+}
+hr{
+    margin-left: 5%;
+    width: 90%;
+}
+
+p#note{
+    font-size:20px;
+}
+p#textR{
+    font-size:15px;
+}
+
+.button1 {
+    /* margin-bottom: 20px;
+    margin-top: 10px;*/
+    background-color: cyan; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:20px;
+    margin: 15px 30px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.buttonHelp{
+    border-radius: 12px;
+    font-size:15px;
+    
+}
+
+.wrapper {
+    text-align: center;
+}
+.wrapperR{
+    text-align: right;
+}
+
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    
+    border: 1px solid white;
+    text-align: center;
+    padding: 8px;
+}
+td{
+    font-size:18px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+select{
+    height:1.8em;
+    width: 7.5em;
+}
+.selectTime{
+    width: 4.5em;
+}
+
+.imgClick{
+    margin-bottom:3px;
+    cursor: pointer;
+}
+
+.tickTable{
+   text-align:center; 
+   font-size:150%; 
+   font-weight:bold; 
+   color:green;
+}
+
+.tableT:hover{
+    background-color:silver;
+}
+
+
+.wrapperHalf{
+    position:relative;
+}
+/*.right,.left{
+    width:50%; position:absolute;
+}*/
+.right{
+    right:0;
+    width:10%; 
+    position:absolute;
+}
+.left{
+    left:0;
+    position:absolute;
+    width:90%;
+    padding: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    
+}

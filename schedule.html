@@ -14,21 +14,20 @@
         <script src="tab.js"></script>
 
         <link rel="stylesheet" type="text/css" href="tcal.css"/>
-	    <script type="text/javascript" src="tcal.js"></script>
-
-
         <link href="dialogCSS.css" rel="stylesheet">
+	    
+
+        <script type="text/javascript" src="tcal.js"></script>
         <script src="dialogJS.js"></script>
+        <script src="scheduleJS.js"></script>
 
 
-
+        <link rel="stylesheet" type="text/css" href="css/sty.css">	
         <link rel="stylesheet" type="text/css" href="css/bootstrapS.css">
-        
         <link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
         <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
         
-        <link rel="stylesheet" type="text/css" href="css/sty.css">	
-        
+    
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!--Font Thai-->
         <link href="https://fonts.googleapis.com/css?family=Athiti:300|Mitr:200" rel="stylesheet"> 
@@ -110,17 +109,17 @@
                             </div>
                             <div class="col-md-3">
                             ห้อง: 
-                            <select>
+                            <select id="selectRoom">
                                 <option value="all">ทุกห้อง </option>
-                                <option value="103">107 </option>
-                                <option value="207">111 </option>
-                                <option value="211">213 </option>
+                                <option value="107">107 </option>
+                                <option value="111">111 </option>
+                                <option value="213">213 </option>
                                 <option value="304">304 </option>
-                                <option value="107">301/1 </option>
-                                <option value="111">301/2 </option>
-                                <option value="111">301/3 </option>
-                                <option value="111">ห้องประชุม1 </option>
-                                <option value="111">ห้องประชุม2 </option>
+                                <option value="301-1">301/1 </option>
+                                <option value="301-2">301/2 </option>
+                                <option value="301-3">301/3 </option>
+                                <option value="r1">ห้องประชุม1 </option>
+                                <option value="r2">ห้องประชุม2 </option>
                             </select></div>
                          <div class="col-md-5"> 
                              <div class="wrapperR">
@@ -148,7 +147,7 @@
                                 <th>16:30 - 18:00</th>
                             </tr>
                             
-                            <tr>
+                            <tr id="107" class="gAll"> 
                                 <td><div class="wrapperR">107 <img name="107" onclick="cc(this.name)"  src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
                                 <br>
                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 60</td>
@@ -162,7 +161,7 @@
                                 <td class="tableT"></td>
 
                             </tr>
-                            <tr>
+                            <tr id="111"class="gAll">
                                 <td><div class="wrapperR">111 <img name="111" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
                                 <br>
                                 <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 50</td>
@@ -175,7 +174,7 @@
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
                             </tr>
-                            <tr>
+                            <tr id="213"class="gAll">
                                 <td><div class="wrapperR">213 <img name="213" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
                                 <br>
                                 <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 50</td>
@@ -188,7 +187,7 @@
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
                             </tr>
-                            <tr>
+                            <tr id="304" class="gAll">
                                 <td><div class="wrapperR">304 <img name="304" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
                                 <br>
                                 <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 60</td>
@@ -201,7 +200,7 @@
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
                             </tr>
-                            <tr>
+                            <tr id="301-1" class="gAll">
                                 <td><div class="wrapperR">301/1 <img name="301/1" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
                                 <br>
                                 <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 30</td>
@@ -214,7 +213,7 @@
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
                             </tr>
-                            <tr>
+                            <tr id="301-2" class="gAll">
                                 <td><div class="wrapperR">301/2 <img name="301/2"onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
                                 <br>
                                 <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 35</td>
@@ -227,7 +226,7 @@
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
                             </tr>
-                            <tr>
+                            <tr id="301-3" class="gAll">
                                 <td><div class="wrapperR">301/3 <img name="301/3" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
                                 <br>
                                 <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 35</td>
@@ -240,7 +239,7 @@
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
                             </tr>
-                            <tr>
+                            <tr id="r1" class="gAll">
                                 <td><div class="wrapperR">ประชุม1 <img name="ประชุม1" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
                                 <br>
                                 <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 20</td>
@@ -253,7 +252,7 @@
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
                             </tr>
-                            <tr>
+                           <tr id="r2" class="gAll">
                                 <td><div class="wrapperR">ประชุม2 <img name="ประชุม2" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
                                 <br>
                                 <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 30</td>
@@ -265,7 +264,7 @@
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
-                            </tr>
+                            </tr></div>
                         </table>
                         <br>
 
@@ -424,8 +423,8 @@
                         <br><br><br>
                         <div class="row">
                                 <div class="col-md-1"></div>
-                                <div class="col-md-11"> 
-                                    หมายเหตุ: เครื่องหมาย * คือ จำเป็นต้องกรอกข้อมูลในช่อง
+                                <div class="col-md-11" style="font-size:24px"> 
+                                    หมายเหตุ: เครื่องหมาย <temp style="color:red;font-size:36px">*</temp> คือ จำเป็นต้องกรอกข้อมูลในช่อง
                                 </div>
                         </div>
                 </div> <!--end tab pane2-->

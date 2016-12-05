@@ -12,3 +12,17 @@ $(document).ready(function () {
   })
   
 });
+
+$(function() {
+    $('.tableT').click( function() {
+        if($(this).val() =="ticked"){
+             $(this).html('');
+             $(this).val('unticked');
+        }
+        else{
+             $(this).html('<img src="img/tick.png" width=35px height=35px></img>');
+             $(this).val('ticked');
+        }
+         
+    });
+});

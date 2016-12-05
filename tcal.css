@@ -21,7 +21,8 @@
 }
 /* container of calendar's pop-up */
 #tcal {
-	 
+
+	
 	position: absolute;
 	visibility: hidden;
 	z-index: 100;
@@ -44,6 +45,7 @@
 	border: 0;
 	width: 100%;
 }
+
 #tcalControls td {
 	border-collapse: collapse;
 	border: 0;
@@ -52,13 +54,14 @@
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	cursor: pointer;
+	
 }
 #tcalControls th {
 	border-collapse: collapse;
 	border: 0;
 	padding: 0;
-	line-height: 25px;
-	font-size: 10px;
+	line-height: 30px;
+	font-size: 12px;
 	text-align: center;
 	font-family: Tahoma, Geneva, sans-serif;
 	font-weight: bold;
@@ -74,6 +77,9 @@
 	border-collapse: collapse;
 	border: 1px solid silver;
 	width: 100%;
+}
+#tcalGrid td:hover{
+	background-color:gold;
 }
 #tcalGrid th {
 	border: 1px solid silver;
@@ -98,4 +104,9 @@
 #tcalGrid td.tcalOtherMonth { color: silver; }
 #tcalGrid td.tcalWeekend { background-color: #ACD6F5; }
 #tcalGrid td.tcalToday { border: 1px solid red; }
-#tcalGrid td.tcalSelected { background-color: #FFB3BE; }		
+#tcalGrid td.tcalSelected { background-color: #FFB3BE; }
+
+#tcalGrid td.tcalWeekend:hover{
+	background-color:gold;
+}	
+

@@ -105,11 +105,11 @@
                         <div class"row">
                             <div class="col-md-3">
                             <!--วันที่: <input type="text">-->
-                            วันที่: <input type="text" name="date" class="tcal" style="background-color:white" value="30/11/2559" />
+                            วันที่: <input type="text" id="datep" name="date" class="tcal" style="background-color:white" value="05/12/2559" />
                                 
 
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3" style="font-size:16px">
                             ห้อง: 
                             <select id="selectRoom">
                                 <option value="all">ทุกห้อง </option>
@@ -132,8 +132,6 @@
 
                         </div>
                         
-
-                        <br>
                         <br>
                         <br>
                     <div class="left">
@@ -154,7 +152,7 @@
                                 <br>
                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 60</td>
                                 </div>
-                                <td class="tableT"></td>
+                                <td class="cantTick"></td>
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
                                 <td></td>
@@ -189,19 +187,7 @@
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
                             </tr>
-                            <tr id="304" class="gAll">
-                                <td><div class="wrapperR">304 <img name="id304" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
-                                <br>
-                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 60</td>
-                                </div>
-                                <td class="tableT"></td>
-                                <td class="tableT"></td>
-                                <td class="tableT"></td>
-                                <td></td>
-                                <td class="tableT"></td>
-                                <td class="tableT"></td>
-                                <td class="tableT"></td>
-                            </tr>
+                            
                             <tr id="301-1" class="gAll">
                                 <td><div class="wrapperR">301/1 <img name="id301-1" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
                                 <br>
@@ -241,6 +227,19 @@
                                 <td class="tableT"></td>
                                 <td class="tableT"></td>
                             </tr>
+                            <tr id="304" class="gAll">
+                                <td><div class="wrapperR">304 <img name="id304" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
+                                <br>
+                                <img src="img/amount.png" title="ความจุห้อง"style="margin-bottom:3px" width="15" height="15" border="0" > 60</td>
+                                </div>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td class="tableT"></td>
+                                <td></td>
+                                <td class="cantTick"></td>
+                                <td class="cantTick"></td>
+                                <td class="tableT"></td>
+                            </tr>
                             <tr id="r1" class="gAll">
                                 <td><div class="wrapperR">ประชุม1 <img name="idr1" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick" width="20" height="20" border="0">
                                 <br>
@@ -269,7 +268,8 @@
                             </tr></div>
                         </table>
                         <br>
-
+                        
+                        
                         <div id="id107" class="modal">
                             <form class="modal-content animate" action="">
                                 <div class="imgcontainer">
@@ -283,6 +283,7 @@
                                     <img src="img/pickf.png">
                                 </div>
                             </form> <!-- form id107-->
+                            
                         </div> <!-- id107 modal-->
 
                         <div id="id111" class="modal">
@@ -317,21 +318,7 @@
                             </form> <!-- form id213-->
                         </div> <!-- id213 modal-->
 
-                        <div id="id304" class="modal">
-                            <form class="modal-content animate" action="">
-                                <div class="imgcontainer">
-                                    <span onclick="document.getElementById('id304').style.display='none'" class="close" title="Close Modal">&times;</span>
-                                    
-                                    <h1>ห้อง 304</h1>
-                                    <hr>
-                                </div>
-                                
-                                <div class="containBig">
-                                    <img src="img/floor.png"><br><br>
-                                    <img src="img/pickf.png">
-                                </div>
-                            </form> <!-- form id304-->
-                        </div> <!-- id304 modal-->
+                        
 
                         <div id="id301-1" class="modal">
                             <form class="modal-content animate" action="">
@@ -381,6 +368,22 @@
                             </form> <!-- form id301-3-->
                         </div> <!-- id301-3 modal-->
 
+                        <div id="id304" class="modal">
+                            <form class="modal-content animate" action="">
+                                <div class="imgcontainer">
+                                    <span onclick="document.getElementById('id304').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                    
+                                    <h1>ห้อง 304</h1>
+                                    <hr>
+                                </div>
+                                
+                                <div class="containBig">
+                                    <img src="img/floor.png"><br><br>
+                                    <img src="img/pickf.png">
+                                </div>
+                            </form> <!-- form id304-->
+                        </div> <!-- id304 modal-->
+
                         <div id="idr1" class="modal">
                             <form class="modal-content animate" action="">
                                 <div class="imgcontainer">
@@ -413,6 +416,8 @@
                             </form> <!-- form idr2-->
                         </div> <!-- idr2 modal-->
                         
+                        
+                        
 
 
                         <p id="note"> ***กรุณาคลิกที่ช่องว่าง ตามเวลาที่ต้องการ หรือ คลิกอีกครั้งเพื่อยกเลิก<p>
@@ -433,7 +438,7 @@
                         <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-4">
-                            *ประจำภาคเรียนที่ 
+                            <labela><redM>* </redM>ประจำภาคเรียนที่</labela> 
                                 <select name="select">
                                     <option>1</option>
                                     <option>2</option>
@@ -441,7 +446,7 @@
                                 </select>
                             </div>
                             <div class="col-md-4">
-                            *ปีการศึกษา 
+                             <labela><redM>* </redM>ปีการศึกษา </labela> 
                             <select name="select">
                                 <option>2559</option>
                                 <option>2560</option>
@@ -454,10 +459,10 @@
                     <div class="row"><!--row 1-->
                          <div class="col-md-1"></div>
                          <div class="col-md-4">
-                            *จำนวนผู้ใช้ <input type="text" maxlength="3" size="10" placeholder=" Ex. 20" required> คน    
+                            <labela><redM>* </redM>จำนวนผู้ใช้ </labela><input type="text" maxlength="3" size="10" placeholder=" Ex. 20" required> คน    
                             </div>
                             <div class="col-md-4">
-                            *อาคารเรียน
+                            <labela><redM>* </redM>อาคารเรียน</labela>
                                 <select name="select">
                                     <option>บร.1</option>
                                     <option>บร.3</option>
@@ -472,7 +477,7 @@
                     <div class="row"> <!-- row 2-->
                         <div class="col-md-1"></div>
                         <div class="col-md-5">
-                            *ใช้ในการเรียนการสอน/การสอบ วิชา: <input type="text" size="10" placeholder=" Ex. CS123 ">
+                            <labela><redM>* </redM>ใช้ในการเรียนการสอน/การสอบ วิชา: </labela><input type="text" size="10" placeholder=" Ex. CS123 ">
                         </div>
                         <div class="col-md-6"></div>
                     </div> <!-- end row 2-->
@@ -481,15 +486,15 @@
                             <div class="row">
                                 <div class="col-md-2"></div>
                                 <div class="col-md-10">
-                                <input type="radio" name="gender" value="always"> ประจำ (วันสอนต้องเป็นไปตาม section ที่แจ้งไปยังสำนักทะเบียนเท่านั้น)<br>
+                                <input type="radio" name="gender" value="always">  <labelb>ประจำ (วันสอนต้องเป็นไปตาม section ที่แจ้งไปยังสำนักทะเบียนเท่านั้น)</labelb><br>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-2"></div>
                                 <div class="col-md-10">
                             <input type="radio" name="gender" value="some"> 
-                                สอนชดเชยเป็นครั้งคราวใน วันที่ <input type="text" size="10" name="date" class="tcal" style="background-color:white" value="" />
-                                เวลาสอนตั้งแต่:
+                               <labelb> สอนชดเชยเป็นครั้งคราวใน วันที่</labelb> <input type="text" size="10" name="date" class="tcal" style="background-color:white" value="" />
+                                 <labelb>เวลาสอนตั้งแต่:</labelb> 
                                 <select class="selectTime" name="select">
                                     <option>8:00</option>
                                     <option>9:30</option>
@@ -499,7 +504,7 @@
                                     <option>15:00</option>
                                     <option>16:30</option>
                                 </select>
-                                ถึง:
+                                <labelb> ถึง:</labelb> 
                                 <select class="selectTime" name="select">
                                     <option>9:30</option>
                                     <option>11:00</option>
@@ -515,8 +520,8 @@
                                 <div class="col-md-2"></div>
                                 <div class="col-md-10">
                                 <input type="radio" name="gender" value="choose">
-                                สอบใน วันที่ <input type="text" size="10"name="date" class="tcal" style="background-color:white" value="" />
-                                เวลาสอบตั้งแต่:
+                                <labelb>สอบใน วันที่ </labelb><input type="text" size="10"name="date" class="tcal" style="background-color:white" value="" />
+                                <labelb>เวลาสอบตั้งแต่: </labelb>
                                     <select class="selectTime" name="select">
                                         <option>8:00</option>
                                         <option>9:30</option>
@@ -526,7 +531,7 @@
                                         <option>15:00</option>
                                         <option>16:30</option>
                                     </select>
-                                    ถึง:
+                                   <labelb> ถึง:</labelb>
                                     <select class="selectTime" name="select">
                                         <option>9:30</option>
                                         <option>11:00</option>
@@ -543,10 +548,10 @@
                         <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-11"> 
-                               ต้องการอุปกรณ์เสริม(ถ้ามี) <input type="text" size="55" placeholder=" Ex.ไมโครโฟน 2 ตัว"><br>
+                                <labela>ต้องการอุปกรณ์เสริม(ถ้ามี) </labela> <input type="text" size="55" placeholder=" Ex.ไมโครโฟน 2 ตัว"><br>
                             </div>
                         </div>
-                        <br><br><br>
+                        <br><br>
                         <div class="row">
                                 <div class="col-md-1"></div>
                                 <div class="col-md-11" style="font-size:24px"> 
@@ -565,9 +570,9 @@
            <div class="col-md-4"> </div>
            <div class="col-md-4"> 
                 <div class="wrapper">
-                    <button class="button button1" onclick="window.history.back()"> ย้อนกลับ </button> 
+                    <button class="button button1" onclick="window.location.href='index.html'"> ย้อนกลับ </button> 
                     <!--<button class="button button1"> ยืนยันการจอง </button>-->
-                    <button class="button button1" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">ยืนยันการจอง</button>
+                    <button name="id01" class="button button1" onclick="cc(this.name)" style="width:auto;">ยืนยันการจอง</button>
                     <div id="id01" class="modal">
                         
                     <form class="modal-content animate" action="confirm.html">

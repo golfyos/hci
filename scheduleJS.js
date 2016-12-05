@@ -3,14 +3,17 @@ $(document).ready(function () {
   //$('#option1').show();
   $('#selectRoom').change(function () {
       if($(this).val()=="all"){
-          $('.gAll').fadeIn(1100);
+          $('.gAll').fadeIn(800);
       }
       else{
          $('.gAll').hide();
-         $('#'+$(this).val()).fadeIn(1000);
+         $('#'+$(this).val()).fadeIn(900);
       }
   })
+
   
+ 
+    
 });
 
 $(function() {
@@ -26,3 +29,12 @@ $(function() {
          
     });
 });
+
+
+/*$(function() {
+    $('.cantTick').click( function() {
+        $(this).addClass('tableT');
+        $(this).removeClass('cantTick');
+    });
+});*/
+

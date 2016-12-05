@@ -128,3 +128,22 @@ span.psw {
        width: 100%;
     }
 }
+
+#leftD{
+    left:0;
+    position:absolute;
+    width:10%;
+    padding: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    display:none;
+}
+.rightD{
+    right:0;
+    width:10%; 
+    position:absolute;
+}
+.middleD{
+    width:100%;
+    position:absolute; 
+}

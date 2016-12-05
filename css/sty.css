@@ -42,6 +42,14 @@
 .navbar-brand {
 	padding: 8px;
 }
+.nav li:hover {
+		/*background-color:yellow;*/
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom:solid gold;
+		
+}
 
 @media (max-width: 767px) {
 	

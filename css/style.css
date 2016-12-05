@@ -146,13 +146,21 @@ html, body {
 		min-height: 6em;
 	}
 }
-
+.nav li:hover {
+		/*background-color:yellow;*/
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom:solid gold;
+		
+}
 @media (max-width: 767px) {
 	
 	.nav li {
 		text-align: left;
 		white-space: nowrap;
 	}
+	
 	
 	.navbar-responsive-collapse  {
 		width: 100%;

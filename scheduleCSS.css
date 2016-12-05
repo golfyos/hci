@@ -135,7 +135,7 @@ td:nth-child(1){
 
 select{
     height:1.8em;
-    width: 6.5em;
+    width: 7.8em;
 }
 .selectTime{
     width: 4.5em;
@@ -191,4 +191,14 @@ labelb{
 }
 redM{
     color:red;
+}
+input[type=radio]{
+   height:15px; 
+   width:15px; 
+   vertical-align: middle;
+}
+label{
+    cursor:pointer;
+    font-size:18px;
+    font-weight: normal ;
 }

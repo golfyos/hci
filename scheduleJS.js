@@ -11,7 +11,7 @@ $(document).ready(function () {
       }
   })
 
-  
+
  
     
 });
@@ -27,6 +27,15 @@ $(function() {
              $(this).val('ticked');
         }
          
+    });
+});
+
+
+$(function() {
+    $('body').click( function(e) {
+        if(!$(e.target).hasClass("tcal")){
+            f_tcalCancel ();
+        }
     });
 });
 

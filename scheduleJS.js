@@ -10,11 +10,17 @@ $(document).ready(function () {
          $('#'+$(this).val()).fadeIn(900);
       }
   })
+    
+    var dateObj = new Date();
+    var month = dateObj.getUTCMonth() + 1; //months from 1-12
+    var day = dateObj.getUTCDate();
+    var year = dateObj.getUTCFullYear();
+    $('#datep').val("0"+day+"/"+month+"/"+year);
 
-
- 
     
 });
+
+window.onload = function() {document.body.scrollTop = document.documentElement.scrollTop = 0;};
 
 $(function() {
     $('.tableT').click( function() {
@@ -38,6 +44,7 @@ $(function() {
         }
     });
 });
+
 
 
 /*$(function() {

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <title>ROOMFORYOU</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+     <link rel="stylesheet" type="text/css" href="css/sty.css">	
+    <link rel="stylesheet" type="text/css" href="css/bootstrapS.css">
+    <link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!--Font Thai-->
+    <link href="https://fonts.googleapis.com/css?family=Athiti:300|Mitr:200" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Prompt:200,400" rel="stylesheet">
+    <link rel="prefetch" href="images/zoom.png">
+
+
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        .w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
+        .fa-anchor,.fa-coffee {font-size:200px}
+
+
+        #section2 {padding-top:50px;height:1000px;color: #fff; background-color: #FF6600;}
+
+        .checkboxtext
+        {
+            /* Checkbox text */
+            font-size: 150%;
+            display: inline;
+        }
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Firefox < 16 */
+        @-moz-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Safari, Chrome and Opera > 12.1 */
+        @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Internet Explorer */
+        @-ms-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Opera < 12.1 */
+        @-o-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+    </style>
+    <body class="w3-light-grey" data-spy="scroll" data-target=".navbar" data-offset="50"
+            style="-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;">
+
+
+
+
+        	<div class="navbar navbar-fixed-top" data-activeslide="2" style="background-color:#630">
+		
+		
+			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+			
+			
+			<div class="nav-collapse collapse navbar-responsive-collapse" >
+				<ul class="nav row" >
+                	
+<div class="col-sm-3" style="text-align:left;padding-left:2%"><a href="./index.html"><img src="./images/logoWEB.png" width="80" height="50"></a></div>                    	
+<li data-slide="1" class="col-sm-1" style=""><a id="menu-link-1" href="./index.html" > <span class="text"  style="color:#FFF; font-size:20px;font-family: 'Mitr', sans-serif;" >หน้าหลัก</span></a></li>
+
+<li data-slide="2" class="col-sm-1"><a id="menu-link-2" href="./index.html#slide-2"  > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">เกี่ยวกับ</span></a></li>
+
+<li data-slide="3" class="col-sm-2"><a id="menu-link-3" href="./index.html#slide-3" > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">วิธีการจองและยกเลิก</span></a></li>
+
+<li data-slide="6" class="col-sm-1"><a id="menu-link-5" href="./index.html#slide-6"><span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">ติดต่อ</span></a></li>
+
+<li data-slide="1" class="col-sm-2"><a id="menu-link-1" href="./index.html#slide-1" > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a></li>
+<div class="col-sm-0"></div> 
+<div  class="col-sm-2" style="text-align:right;"><a href="#" class="myButton" >เข้าสู่ระบบ</a></div>
+
+
+					</ul>
+				
+			</div><!-- /.nav-collapse -->
+		
+	</div><!-- /.navbar -->
+
+        <!-- Header -->
+        <header class="w3-container w3-yellow w3-center w3-padding-48">
+            <h1 class="w3-margin w3-jumbo" >ระบบช่วยค้นหาห้อง</h1>
+
+
+            <div class=" w3-padding w3-container">
+                <div class="w3-container" style="margin-left:10%;">
+
+                    <div class="w3-display-container w3-padding w3-col l11 m9 ">
+
+                        <div class="w3-left-align w3-white w3-padding-16 w3-border" style="border-radius:10px;">
+                            <form action="form.asp" target="_blank">
+                                <div class="w3-row-padding" style="margin:2 -8px;">
+                                    <div class="w3-half w3-margin-bottom">
+                                        <label> *วันที่</label>
+                                        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>
+                                    </div>
+                                    <div class="w3-half">
+                                        <label> ถึง</label>
+                                        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut">
+                                    </div>
+                                </div>
+
+                                <div class="w3-row-padding" style="margin:2 -20px"> 
+                                    <div class="w3-display w3-padding w3-col l5 m8 ">
+                                        <div class="w3-container w3-yellow ">
+                                            <h3><i class="fa fa-calendar-check-o w3-margin-right"></i>เลือกวัน</h3>
+                                        </div>
+                                        <div class="w3-container w3-white w3-padding-16 w3-border">
+                                            <div class="w3-row-padding">
+                                                <div class="w3-col m3">
+                                                    <label class="selectAllLabel">
+                                                        <input type="checkbox" id="selectAllGroup1"/> ทุกวัน
+                                                    </label>
+                                                </div>
+                                                <div class="w3-col m3">
+                                                    <label>
+                                                        <input type="checkbox" id="group1_mon" name="group1" value="1m"/> จันทร์
+                                                    </label>
+                                                </div>
+                                                <div class="w3-col m3">
+                                                    <label>
+                                                        <input type="checkbox" id="group1_tues" name="group1" value="1t"/> อังคาร
+                                                    </label>
+
+                                                </div>
+                                                <div class="w3-col m3">
+                                                    <label>
+                                                        <input type="checkbox" id="group1_wed" name="group1" value="1w"/> พุธ
+                                                    </label>
+                                                </div>                          
+                                            </div>
+                                            <div class="w3-row-padding">
+                                                <div class="w3-col m3">
+                                                    <label>
+                                                        <input type="checkbox" id="group1_thurs" name="group1" value="1th"/> พฤหัส
+                                                    </label>
+                                                </div>
+                                                <div class="w3-col m3">
+                                                    <label>
+                                                        <input type="checkbox" id="group1_fri" name="group1" value="1f"/> ศุกร์
+                                                    </label>
+                                                </div>
+                                                <div class="w3-col m3">
+                                                    <label>
+                                                        <input type="checkbox" id="group1_sat" name="group1" value="1sa"/> เสาร์
+                                                    </label>
+
+                                                </div>
+                                                <div class="w3-col m3">
+                                                    <label>
+                                                        <input type="checkbox" id="group1_sun" name="group1" value="1su"/> อาทิตย์
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="w3-row-padding" style="margin:2 -20px"> 
+                                    <div class="w3-row-padding" style="margin:2 -8px;">
+                                        <div class="w3-half w3-margin-bottom">
+                                            <label> เวลา</label>
+                                            <input class="w3-input w3-border" type="number"  name="TimeIn">
+                                        </div>
+                                        <div class="w3-half">
+                                            <label> ถึง</label>
+                                            <input class="w3-input w3-border" type="number"  name="TimeOut">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w3-row-padding" style="margin:2 -20px"> 
+                                    <div class="w3-row-padding" style="margin:2 -8px;">
+                                        <div class="w3-half w3-margin-bottom">
+                                            <label> ชั้น</label>
+                                            <input class="w3-input w3-border" type="number"  name="Floor">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w3-row-padding" style="margin:2 -20px"> 
+                                    <div class="w3-row-padding" style="margin:2 -8px;">
+                                        <div class="w3-half w3-margin-bottom">
+                                            <label> ห้อง</label>
+                                            <input class="w3-input w3-border" type="number"  name="Room">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w3-row-padding" style="margin:2 -20px"> 
+                                    <div class="w3-row-padding" style="margin:2 -8px;">
+                                        <div class="w3-half w3-margin-bottom">
+                                            <label> จำนวนผู้ใช้</label>
+                                            <input class="w3-input w3-border" type="number"  name="NumUser">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+
+                            <div class="w3-row-padding" style="margin:2 -20px"> 
+                                <div class="w3-row-padding" style="margin:2 -8px;">
+                                    <div class="w3-row-padding">
+                                        <div class="w3-col m5">
+                                            <button class="w3-btn w3-padding-16 w3-large w3-margin-top"  onclick="window.location.href='schedule.html'"> ย้อนกลับ </button>
+                                        </div> 
+                                        <div class="w3-col m5">
+                                            <button class="w3-btn w3-padding-13 w3-small w3-margin-top"> RESET </button>
+                                        </div> 
+                                        <div class="w3-col m1">
+                                            <button class="w3-btn w3-padding-16 w3-large w3-margin-top"> ค้นหา </button>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </header>   
+
+
+
+        <div class="w3-content" style="max-width:1532px;">
+            <!--Second-->
+            <div id="section2" class="container-fluid">
+                <h1>Section 2</h1>
+
+                <!-- First Grid -->
+                <div class="container">
+                    <h2>ผลการค้นหาห้อง</h2>
+
+
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input  type="checkbox" name="optiona" id="selectAll" checked />
+                                    <span class="checkboxtext">
+                                        เลือกทั้งหมด
+                                    </span>
+                                </th>
+
+
+                                <th> </th>
+                                <th> </th>
+                                <th> </th>
+                                <th> </th>
+                                <th>
+
+                                    <!--Increate-->
+                                    <label> จัดเรียงตาม</label>
+                                    <select class="form-control" id="adults">
+                                        <option>ความจุห้อง</option>
+                                        <option>วัน</option>
+                                        <option>เวลา</option>
+                                        <option>ชั้น</option>
+                                    </select>
+
+                                </th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--first line-->
+                            <tr>
+                                <td>
+                                    <form action="demo_form.asp" method="get">
+                                        <input type="checkbox" name="vehicle" value="Bike"> วันจันทร์  ที่  31/10/2559 <br>
+
+                                    </form>
+                                </td>
+                                <td> เวลา 9:30-11:00</td>
+                                <td> ความจุห้อง 20 คน</td>
+                                <td> ชั้น  2</td>
+                                <td>
+                                    <p>ห้อง 207 
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-info-sign"></span>
+                                        </a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <!--second line-->
+                            <tr>
+                                <td>
+                                    <form action="demo_form.asp" method="get">
+                                        <input type="checkbox" name="vehicle" value="Bike"> วันอังคาร  ที่  1/11/2559 <br>
+
+                                    </form>
+                                </td>
+                                <td> เวลา 9:30-11:00</td>
+                                <td> ความจุห้อง 20 คน</td>
+                                <td> ชั้น  2</td>
+                                <td>
+                                    <p>ห้อง 207 
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-info-sign"></span>
+                                        </a>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <form action="demo_form.asp" method="get">
+                                        <input type="checkbox" name="vehicle" value="Bike"> วันพุธ  ที่  2/11/2559 <br>
+
+                                    </form>
+                                </td>
+                                <td> เวลา 9:30-11:00</td>
+                                <td> ความจุห้อง 20 คน</td>
+                                <td> ชั้น  2</td>
+                                <td>
+                                    <p>ห้อง 207   
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-info-sign"></span>
+                                        </a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+                <div class="w3-row-padding" style="margin:2 -20px"> 
+                    <div class="w3-row-padding" style="margin:2 -8px;">
+                        <div class="w3-row-padding">
+                           
+                            <div class="w3-col m5">
+                                <button class="w3-btn w3-padding-16 w3-large w3-margin-top"> ย้อนกลับ </button>
+                            </div> 
+                            <div class="w3-col m5">
+                                <button class="w3-btn w3-padding-16 w3-large w3-margin-top"> ยืนยันการจอง </button>
+                            </div> 
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </body>
+
+    <style>
+        footer{
+            width:100%;
+            height:40px;
+            margin-top:50px;
+            position:relative;
+            clear: both;
+            background-color:#630;
+        }   
+    </style>
+    <footer>
+	    <p style="color:#FFF;font-size:20px;text-align:center;font-family:'Century Gothic';">&#169; 2016 ROOM FOR U, All Rights Reserved</p>
+    </footer>
+</html>

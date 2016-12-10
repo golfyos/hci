@@ -96,7 +96,7 @@ function f_tcalGetHTML (d_date) {
 			if (d_current.valueOf() == d_selected.valueOf())
 				a_class[a_class.length] = s_pfx + 'Selected';
 
-			s_html += '<td' + f_tcalRelDate(d_current) + (a_class.length ? ' class="' + a_class.join(' ') + '">' : '>') + n_date + '</td>';
+			s_html += '<td id="days"' + f_tcalRelDate(d_current) + (a_class.length ? ' class="' + a_class.join(' ') + '">' : '>') + n_date + '</td>';
 			d_current.setDate(++n_date);
 		}
 		s_html +='</tr>';
@@ -153,10 +153,15 @@ function f_tcalUpdate (n_date, b_keepOpen) {
 	}
 	else {
 		e_input.value = f_tcalGenerateDate(d_date, A_TCALCONF.format);
+		day = e_input.value;
 		f_tcalCancel();
 	}
 }
-
+var day = "";
+function getDay(){
+	var temp1 = day.split("/");
+	return temp1[0]+temp1[1]+temp1[2];
+}
 function f_tcalOnClick () {
 
 	// see if already opened
@@ -248,6 +253,7 @@ function f_tcalGetInputs (b_active) {
 			return e_input;
 
 		a_result[a_result.length] = e_input;
+		
 	}
 	return b_active ? null : a_result;
 }

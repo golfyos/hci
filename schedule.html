@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta content="text/html" charset="utf-8">
-        <title> RoomForU - Overview</title> 
+        <title> Overview - RoomForU</title> 
         
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -546,9 +546,10 @@
            <div class="col-md-2"> </div>
            <div class="col-md-8"> 
                 <div class="wrapper">
+                    <button name="id01" class="button button1" onclick="clog(this.name)" style="width:auto;">ยืนยันการจอง</button>
                     <button class="button button1" onclick="window.location.href='index.html'"> ย้อนกลับ </button> 
                     <!--<button class="button button1"> ยืนยันการจอง </button>-->
-                    <button name="id01" class="button button1" onclick="clog(this.name)" style="width:auto;">ยืนยันการจอง</button>
+                    
                     
                     <div id="id01" class="modal">
                     <form id="idlog"class="modal-content animate" action="" method="POST">
@@ -561,13 +562,13 @@
                             <div class="containBig">  
                                 <alertmes id="ames"> </alertmes><br>
                                 <!--<label><b>ชื่อผู้ใช้</b></label><br>-->
-                                <img src="img/user.png" style="margin-bottom:3px" width="20" height="20" alt="us" ><input class="inputTP" type="text" placeholder=" ชื่อผู้ใช้" name="uname" required>
+                                <img src="img/user.png" style="margin-bottom:3px" width="20" height="20" alt="us" ><input class="inputTP"style="font-size:20px" type="text" placeholder=" ชื่อผู้ใช้" name="uname" required>
                                 <br>
                                 <br> 
                                 <!--<label><b>รหัสผ่าน</b></label><br>-->
-                               <img src="img/password.png" style="margin-bottom:3px" width="20" height="20" alt="pas" ><input class="inputTP" type="password" placeholder=" รหัสผ่าน" name="psw" required><br>
+                               <img src="img/password.png" style="margin-bottom:3px" width="20" height="20" alt="pas" ><input class="inputTP" style="font-size:20px" type="password" placeholder=" รหัสผ่าน" name="psw" required><br>
                                 <br>
-                                <button class="buttonD" type="submit">ลงชื่อเข้าใช้</button><br>
+                                <button class="buttonD" type="submit" >ลงชื่อเข้าใช้</button><br>
                                 <input class="inputTP" type="checkbox" checked="checked"><br>Remember me
 
                             </div>  <!-- containBig-->

@@ -1,0 +1,118 @@
+<!DOCTYPE>
+<html>
+    <head>
+         <meta content="text/html" charset="utf-8">
+         <title> Confirmation - RoomForU </title>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+        <link rel="stylesheet" href="confirmCSS.css">
+        <link href="https://fonts.googleapis.com/css?family=Trirong:500" rel="stylesheet">
+
+
+
+
+        <link rel="stylesheet" type="text/css" href="css/sty.css">	
+        <link rel="stylesheet" type="text/css" href="css/bootstrapS.css">
+        <link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
+        
+        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <!--Font Thai-->
+        <link href="https://fonts.googleapis.com/css?family=Athiti:300|Mitr:200" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Prompt:200,400" rel="stylesheet">
+        <link rel="prefetch" href="images/zoom.png">
+    </head>
+    <div class="navbar navbar-fixed-top" data-activeslide="2" style="background-color:#630">
+		
+		
+			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+			
+			
+			<div class="nav-collapse collapse navbar-responsive-collapse" >
+				<ul class="nav row" >
+                	
+<div class="col-sm-3" style="text-align:left;padding-left:2%"><a href="./index.html"><img src="./images/logoWEB.png" width="80" height="50"></a></div>           	
+<li data-slide="1" class="col-sm-1" style=""><a id="menu-link-1" href="./index.html" > <span class="text"  style="color:#FFF; font-size:20px;font-family: 'Mitr', sans-serif;" >หน้าหลัก</span></a></li>
+
+<li data-slide="2" class="col-sm-1"><a id="menu-link-2" href="./index.html#slide-2"  > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">เกี่ยวกับ</span></a></li>
+
+<li data-slide="3" class="col-sm-2"><a id="menu-link-3" href="./index.html#slide-3" > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">วิธีการจองและยกเลิก</span></a></li>
+
+<li data-slide="6" class="col-sm-1"><a id="menu-link-5" href="./index.html#slide-6"><span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">ติดต่อ</span></a></li>
+
+<li data-slide="1" class="col-sm-2"><a id="menu-link-1" href="./index.html#slide-1" > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a></li>
+<div class="col-sm-0"></div> 
+<div class="col-sm-2" style="text-align:right;"><a href="#" class="myButton" >เข้าสู่ระบบ</a></div>
+
+
+					</ul>
+				
+			</div><!-- /.nav-collapse -->
+		
+	</div><!-- /.navbar -->
+    <script>
+
+        $(document).ready(function(){
+             var idx = document.URL.split("=");
+            document.getElementById("ht").innerHTML =  "คุณ"+decodeURIComponent(idx[1]);
+        });
+    </script>
+    <body>
+        <h1> ยืนยันการจองห้อง </h1>
+        <div class="contanier whi">
+            <div class="row">
+                <p id="ht" class="headText"> <br>  
+                    
+                </p>
+                <p class="headText">ต้องการจองห้องดังนี้</p>
+                <br>
+                <p class="contentText">
+                    <hh2>ห้อง</hh2> : &nbsp;304 <br>
+                    <hh2>วันที่</hh2> : &nbsp;15 ธันวาคม 2559 <br>
+                    <hh2>เวลา</hh2> : &nbsp;11.00 - 12.30 น. <br>
+                </p>
+                
+            </div>
+            <br><br><br>
+            <div class="row" >
+                    <div class="col-xs-1"> </div>
+                    <div class="col-xs-10" style="text-align:center">
+                        <button class="button11"  style="margin-left:30px"onclick="window.history.back()"> ยกเลิก </button>
+                        <button class="button11" onclick="document.getElementById('idcon').style.display='block';"> ยืนยันการจอง </button>
+                         
+                    
+                    </div>
+                    <div class="col-xs-1"> </div>
+            </div>
+        </div>
+
+
+                <div id="idcon" class="modal">
+                    <form id="idcon"class="modal-content animate" action="scheduleStaff.html" method="POST">
+                        <div class="imgcontainer">
+                           <!-- <span onclick="document.getElementById('idcon').style.display='none';document.getElementById('ames').innerHTML=''" class="close" title="Close Modal">&times;</span>-->
+                            <img src="img/finish.png" width="250" height="250" alt="a">
+                           <h1> จองห้องเรียบร้อยแล้ว </h1>
+                           <!-- <hr>-->
+                        </div> <!-- imgcontainer -->
+                            <div class="containBig">  
+                                
+                                <button class="buttonD" type="submit">ตกลง</button><br>
+                                
+                            </div>  <!-- containBig-->
+                            <!--<div class="containBig" style="background-color:#f1f1f1">
+                                <button class="buttonD cancelbtn" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>-->
+                     </form>
+                </div>  <!-- idcon -->
+    </body>
+
+    <footer>
+	    <p style="color:#FFF;font-size:20px;text-align:center;font-family:'Century Gothic';">&#169; 2016 ROOM FOR U, All Rights Reserved</p>
+    </footer>
+</html>

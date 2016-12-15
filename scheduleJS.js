@@ -111,14 +111,26 @@ $(document).ready(function () {
     var month = dateObj.getUTCMonth() + 1; //months from 1-12
     var day = dateObj.getDate();
     var year = dateObj.getUTCFullYear();
+    if(day<10){
+        day = "0"+day;
+    }if(month<10){
+        month = "0"+month;
+    }
     $('#datep').val(""+day+"/"+month+"/"+year);
 
     //loadData();
-    
+    loadTable();
     
 });
 
 
+function loadTable(){
+    var mydata = JSON.parse(data);
+    for(var i=0;i<54;i++){
+       $("#"+mydata[i].id).addClass(mydata[i].status);
+       $("#"+mydata[i].id).val("unticked");
+    }
+}
 
 
 var idAllRoom = ["107-800930","107-9301100","107-11001230","107-13301500","107-15001630","107-16301800",
@@ -183,23 +195,11 @@ function loadData(){
     
 }
 
-window.onload = function() {document.body.scrollTop = document.documentElement.scrollTop = 0;};
+window.onload = function() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+};
 
 
-/*$(function() {
-    $('.tableT').click( function() {
-       // alert("gg");
-        if($(this).val() =="ticked"){
-             $(this).html('');
-             $(this).val('unticked');
-        }
-        else{       
-             $(this).html('&#10004;');
-             $(this).val('ticked');
-        }
-         
-    });
-});*/
 
 
 $(function() {

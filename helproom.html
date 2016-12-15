@@ -1,407 +1,1110 @@
 <!DOCTYPE html>
 <html>
-    <title>Search - RoomForU</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Search - RoomForU</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <meta charset="utf-8"> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-
-     <link rel="stylesheet" type="text/css" href="css/sty.css">	
-    <link rel="stylesheet" type="text/css" href="css/bootstrapS.css">
-    <link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
-    <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <!--Font Thai-->
-    <link href="https://fonts.googleapis.com/css?family=Athiti:300|Mitr:200" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Prompt:200,400" rel="stylesheet">
-    <link rel="prefetch" href="images/zoom.png">
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 
 
-    <style>
-        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-        .w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
-        .fa-anchor,.fa-coffee {font-size:200px}
+
+<link rel="stylesheet" type="text/css" href="css/sty.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrapS.css">
+<link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet'
+	type='text/css'>
+<!--Font Thai-->
+<link href="https://fonts.googleapis.com/css?family=Athiti:300|Mitr:200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Prompt:200,400" rel="stylesheet">
+<link rel="prefetch" href="images/zoom.png">
+
+<script type="text/javascript" src="tcal.js"></script>
+<link rel="stylesheet" type="text/css" href="tcal.css" />
+
+<link href="https://fonts.googleapis.com/css?family=Trirong:500" rel="stylesheet">
 
 
-        #section2 {padding-top:50px;height:1000px;color: #fff; background-color: #FF6600;}
+<script type="text/javascript" src="jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="jquery.dataTables.min.css" />
 
-        .checkboxtext
-        {
-            /* Checkbox text */
-            font-size: 150%;
-            display: inline;
-        }
-        @keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
+<script type="text/javascript" src="dialogJS.js"></script>
+<link rel="stylesheet" type="text/css" href="dialogCSS.css" />
+<style>
+	body,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Trirong', serif;
+	}
+	
+	.w3-navbar {
+		font-family: 'Trirong', serif;
+	}
+	
+	.fa-anchor,
+	.fa-coffee {
+		font-size: 200px
+	}
+	
+	.w3-container {
+		background-color: #FFCC33;
+	}
+	
+	#section2 {
+		padding-top: 50px;
+        padding-top: 50px;
+		height: 100%;
+		color: #fff;
+		background-color: limegreen;
+        position : relative;
+	}
+	
+	.checkboxtext {
+		/* Checkbox text */
+		font-size: 150%;
+		display: inline;
+	}
+	
+	@keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	/* Firefox < 16 */
+	
+	@-moz-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	/* Safari, Chrome and Opera > 12.1 */
+	
+	@-webkit-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	/* Internet Explorer */
+	
+	@-ms-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	/* Opera < 12.1 */
+	
+	@-o-keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	
+	.w3-btn {
+		background-color: cyan;
+		/* Green */
+		border: none;
+		color: black;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 20px;
+		margin: 15px 30px;
+		cursor: pointer;
+		border-radius: 12px;
+		margin-top: 0px;
+		border: 3px solid black;
+		width: 22%;
+	}
+	
+	.re {
+		background-color: cyan;
+		/* Green */
+		border: none;
+		color: black;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 20px;
+		margin: 16px 30px;
+		cursor: pointer;
+		border-radius: 12px;
+		margin-top: 0px;
+		border: 3px solid black;
+		width: 18%;
+	}
+	
+	.w3-btn:hover,
+	.re:hover {
+		border: 3px solid black;
+		background-color: cornflowerblue;
+		color: white;
+		-webkit-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+		-moz-box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+		box-shadow: 0px 1px 5px rgba(50, 50, 50, 0.75);
+		-webkit-transition-duration: 0.4s;
+		/* Safari */
+		transition-duration: 0.4s;
+		cursor: pointer;
+	}
+	
+	.button {
+		background-color: #4CAF50;
+		/* Green */
+		border: none;
+		color: white;
+		padding: 16px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 18px;
+		margin: 4px 2px;
+		-webkit-transition-duration: 0.4s;
+		/* Safari */
+		transition-duration: 0.4s;
+		cursor: pointer;
+		width: 180px;
+	}
+	
+	.button1 {
+		background-color: #F60;
+		color: #FFF;
+		border: 2px solid #F60;
+	}
+	
+	.button1:hover {
+		background-color: white;
+		color: black;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	}
+	
+	.button2 {
+		background-color: #630;
+		color: white;
+		border: 2px solid #630;
+	}
+	
+	.button2:hover {
+		background-color: white;
+		color: black;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	}
+</style>
+<script>
+        $(function() {
+            $('body').click( function(e) {
+                if(!$(e.target).hasClass("tcal")){
+                    f_tcalCancel ();
+                }
+                });
+            });
 
-        /* Firefox < 16 */
-        @-moz-keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
+    </script>
 
-        /* Safari, Chrome and Opera > 12.1 */
-        @-webkit-keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-
-        /* Internet Explorer */
-        @-ms-keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-
-        /* Opera < 12.1 */
-        @-o-keyframes fadein {
-            from { opacity: 0; }
-            to   { opacity: 1; }
-        }
-
-    </style>
-    <body class="w3-light-grey" data-spy="scroll" data-target=".navbar" data-offset="50"
-            style="-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+<body class="w3-light-grey" data-spy="scroll" data-target=".navbar" data-offset="50" style="-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
          -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;">
+            animation: fadein 2s; ">
 
 
 
 
-        	<div class="navbar navbar-fixed-top" data-activeslide="2" style="background-color:#630">
-		
-		
-			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-			
-			
-			<div class="nav-collapse collapse navbar-responsive-collapse" >
-				<ul class="nav row" >
-                	
-<div class="col-sm-3" style="text-align:left;padding-left:2%"><a href="./index.html"><img src="./images/logoWEB.png" width="80" height="50"></a></div>                    	
-<li data-slide="1" class="col-sm-1" style=""><a id="menu-link-1" href="./index.html" > <span class="text"  style="color:#FFF; font-size:20px;font-family: 'Mitr', sans-serif;" >หน้าหลัก</span></a></li>
-
-<li data-slide="2" class="col-sm-1"><a id="menu-link-2" href="./index.html#slide-2"  > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">เกี่ยวกับ</span></a></li>
-
-<li data-slide="3" class="col-sm-2"><a id="menu-link-3" href="./index.html#slide-3" > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">วิธีการจองและยกเลิก</span></a></li>
-
-<li data-slide="6" class="col-sm-1"><a id="menu-link-5" href="./index.html#slide-6"><span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">ติดต่อ</span></a></li>
-
-<li data-slide="1" class="col-sm-2"><a id="menu-link-1" href="./index.html#slide-1" > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a></li>
-<div class="col-sm-0"></div> 
-<div  class="col-sm-2" style="text-align:right;"><a href="#" class="myButton" >เข้าสู่ระบบ</a></div>
+	<div class="navbar navbar-fixed-top" data-activeslide="2" style="background-color:#630">
 
 
-					</ul>
-				
-			</div><!-- /.nav-collapse -->
-		
-	</div><!-- /.navbar -->
-
-        <!-- Header -->
-        <header class="w3-container w3-yellow w3-center w3-padding-48">
-            <h1 class="w3-margin w3-jumbo" >ระบบช่วยค้นหาห้อง</h1>
+		<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
 
 
-            <div class=" w3-padding w3-container">
-                <div class="w3-container" style="margin-left:10%;">
+		<div class="nav-collapse collapse navbar-responsive-collapse">
+			<ul class="nav row">
 
-                    <div class="w3-display-container w3-padding w3-col l11 m9 ">
+				<div class="col-sm-3" style="text-align:left;padding-left:2%">
+					<a href="./index.html"><img src="./images/logoWEB.png" width="80" height="50"></a>
+				</div>
+				<li data-slide="1" class="col-sm-1" style="">
+					<a id="menu-link-1" href="./index.html"> <span class="text" style="color:#FFF; font-size:20px;font-family: 'Mitr', sans-serif;">หน้าหลัก</span></a>
+				</li>
 
-                        <div class="w3-left-align w3-white w3-padding-16 w3-border" style="border-radius:10px;">
-                            <form action="form.asp" target="_blank">
-                                <div class="w3-row-padding" style="margin:2 -8px;">
-                                    <div class="w3-half w3-margin-bottom">
-                                        <label> *วันที่</label>
-                                        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>
-                                    </div>
-                                    <div class="w3-half">
-                                        <label> ถึง</label>
-                                        <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="CheckOut">
-                                    </div>
-                                </div>
+				<li data-slide="2" class="col-sm-1">
+					<a id="menu-link-2" href="./index.html#slide-2"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">เกี่ยวกับ</span></a>
+				</li>
 
-                                <div class="w3-row-padding" style="margin:2 -20px"> 
-                                    <div class="w3-display w3-padding w3-col l5 m8 ">
-                                        <div class="w3-container w3-yellow ">
-                                            <h3><i class="fa fa-calendar-check-o w3-margin-right"></i>เลือกวัน</h3>
-                                        </div>
-                                        <div class="w3-container w3-white w3-padding-16 w3-border">
-                                            <div class="w3-row-padding">
-                                                <div class="w3-col m3">
-                                                    <label class="selectAllLabel">
+				<li data-slide="3" class="col-sm-2">
+					<a id="menu-link-3" href="./index.html#slide-3"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">วิธีการจองและยกเลิก</span></a>
+				</li>
+
+				<li data-slide="6" class="col-sm-1"><a id="menu-link-5" href="./index.html#slide-6"><span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">ติดต่อ</span></a></li>
+
+				<li data-slide="1" class="col-sm-2">
+					<a id="menu-link-1" href="./index.html#slide-1"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a>
+				</li>
+				<div class="col-sm-0"></div>
+				<div class="col-sm-2" style="text-align:right;"><a href="#" class="myButton">เข้าสู่ระบบ</a></div>
+
+
+			</ul>
+
+		</div>
+		<!-- /.nav-collapse -->
+
+	</div>
+	<!-- /.navbar -->
+	<script>
+        $(document).ready(function(){
+            var d = new Date();
+            var dd = d.getDate();
+            var mm = d.getMonth()+1;
+            var yy = d.getFullYear();
+            if(dd<10) dd = "0"+dd;
+            if(mm<10) mm = "0"+mm;
+            var date =dd+"/"+mm+"/"+yy;
+            $('#datep').val(date);
+            $('#datepp').val(date);
+        });
+    </script>
+	<!-- Header -->
+	<header class="w3-container  w3-center w3-padding-48">
+		<h1 class="w3-margin">ระบบช่วยค้นหาห้อง</h1>
+
+
+		<div class=" w3-padding w3-container">
+			<div class="w3-container" style="margin-left:10%;">
+
+				<div class="w3-display-container w3-padding w3-col l11 m9 ">
+
+					<div class="w3-left-align w3-white w3-padding-16 w3-border" style="border-radius:10px;">
+						<form action="" target="_blank">
+							<div class="w3-row-padding" style="margin:2 -8px;">
+								<div class="w3-half w3-margin-bottom">
+									<label> <redM style="color:red;font-size:22px;">*</redM> วันที่</label>
+									<input style="font-size:18px; height:45px;" class="w3-input w3-border tcal" id="datep" name="date" type="date" placeholder="DD/MM/YYYY"
+										required>
+								</div>
+								<div class="w3-half">
+									<label> <redM style="color:red;font-size:22px;">*</redM> ถึง</label>
+									<input style="font-size:18px; height:45px;" class="w3-input w3-border tcal" id="datepp" type="date" placeholder="DD/MM/YYYY"
+										name="CheckOut">
+								</div>
+							</div>
+
+							<div class="w3-row-padding" style="margin:2 -20px">
+								<div class="w3-display w3-padding w3-col l5 m8 ">
+									<div class="w3-container w3-yellow ">
+										<h3><i class="fa fa-calendar-check-o w3-margin-right"></i>เลือกวัน</h3>
+									</div>
+									<div class="w3-container w3-white w3-padding-16 w3-border">
+										<div class="w3-row-padding">
+											<div class="w3-col m3">
+												<label class="selectAllLabel">
                                                         <input type="checkbox" id="selectAllGroup1"/> ทุกวัน
                                                     </label>
-                                                </div>
-                                                <div class="w3-col m3">
-                                                    <label>
+											</div>
+											<div class="w3-col m3">
+												<label>
                                                         <input type="checkbox" id="group1_mon" name="group1" value="1m"/> จันทร์
                                                     </label>
-                                                </div>
-                                                <div class="w3-col m3">
-                                                    <label>
+											</div>
+											<div class="w3-col m3">
+												<label>
                                                         <input type="checkbox" id="group1_tues" name="group1" value="1t"/> อังคาร
                                                     </label>
 
-                                                </div>
-                                                <div class="w3-col m3">
-                                                    <label>
+											</div>
+											<div class="w3-col m3">
+												<label>
                                                         <input type="checkbox" id="group1_wed" name="group1" value="1w"/> พุธ
                                                     </label>
-                                                </div>                          
-                                            </div>
-                                            <div class="w3-row-padding">
-                                                <div class="w3-col m3">
-                                                    <label>
+											</div>
+										</div>
+										<div class="w3-row-padding">
+											<div class="w3-col m3">
+												<label>
                                                         <input type="checkbox" id="group1_thurs" name="group1" value="1th"/> พฤหัส
                                                     </label>
-                                                </div>
-                                                <div class="w3-col m3">
-                                                    <label>
+											</div>
+											<div class="w3-col m3">
+												<label>
                                                         <input type="checkbox" id="group1_fri" name="group1" value="1f"/> ศุกร์
                                                     </label>
-                                                </div>
-                                                <div class="w3-col m3">
-                                                    <label>
+											</div>
+											<div class="w3-col m3">
+												<label>
                                                         <input type="checkbox" id="group1_sat" name="group1" value="1sa"/> เสาร์
                                                     </label>
 
-                                                </div>
-                                                <div class="w3-col m3">
-                                                    <label>
+											</div>
+											<div class="w3-col m3">
+												<label>
                                                         <input type="checkbox" id="group1_sun" name="group1" value="1su"/> อาทิตย์
                                                     </label>
-                                                </div>
+											</div>
 
-                                            </div>
-                                        </div>
-                                    </div>
+										</div>
+									</div>
+								</div>
 
-                                </div>
-                                <div class="w3-row-padding" style="margin:2 -20px"> 
-                                    <div class="w3-row-padding" style="margin:2 -8px;">
-                                        <div class="w3-half w3-margin-bottom">
-                                            <label> เวลา</label>
-                                            <input class="w3-input w3-border" type="number"  name="TimeIn">
-                                        </div>
-                                        <div class="w3-half">
-                                            <label> ถึง</label>
-                                            <input class="w3-input w3-border" type="number"  name="TimeOut">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w3-row-padding" style="margin:2 -20px"> 
-                                    <div class="w3-row-padding" style="margin:2 -8px;">
-                                        <div class="w3-half w3-margin-bottom">
-                                            <label> ชั้น</label>
-                                            <input class="w3-input w3-border" type="number"  name="Floor">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w3-row-padding" style="margin:2 -20px"> 
-                                    <div class="w3-row-padding" style="margin:2 -8px;">
-                                        <div class="w3-half w3-margin-bottom">
-                                            <label> ห้อง</label>
-                                            <input class="w3-input w3-border" type="number"  name="Room">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w3-row-padding" style="margin:2 -20px"> 
-                                    <div class="w3-row-padding" style="margin:2 -8px;">
-                                        <div class="w3-half w3-margin-bottom">
-                                            <label> จำนวนผู้ใช้</label>
-                                            <input class="w3-input w3-border" type="number"  name="NumUser">
-                                        </div>
-                                    </div>
-                                </div>
+							</div>
+							<div class="w3-row-padding" style="margin:2 -20px">
+								<div class="w3-row-padding" style="margin:2 -8px;">
+									<div class="w3-half w3-margin-bottom">
+										<label> เวลา</label>
 
-                            </form>
+										<select class="selectTime w3-border w3-input" style="font-size:18px; height:45px;" name="select">
+                                                <option value=""></option>
+                                                <option id="800f" value="800f">8:00</option>
+                                                <option id="930f" value="930f">9:30</option>
+                                                <option id="1100f" value="1100f">11:00</option>
+                                                <!--<option id="1230f" value="1230f">12:30</option>-->
+                                                <option id="1330f" value="1330f">13:30</option>
+                                                <option id="1500f" value="1500f">15:00</option>
+                                                <option id="1630f" value="1630f">16:30</option>
+                                            </select>
+									</div>
+									<div class="w3-half">
+										<label> ถึง</label>
+										<select class="selectTimeTo w3-input w3-border" style="font-size:18px; height:45px;" name="select">
+                                                <option  value=""></option>
+                                                <option id="930t" value="930t">9:30</option>
+                                                <option id="1100t" value="1100t">11:00</option>
+                                                <option id="1230t" value="1230t">12:30</option>
+                                                <option id="1330t" value="1330t">13:30</option>
+                                                <option id="1500t" value="1500t">15:00</option>
+                                                <option id="1630t" value="1630t">16:30</option>
+                                                <option id="1800t" value="1800t">18:00</option>
+                                            </select>
+									</div>
+								</div>
+							</div>
+							<div class="w3-row-padding" style="margin:2 -20px">
+								<div class="w3-row-padding" style="margin:2 -8px;">
+									<div class="w3-half w3-margin-bottom">
+										<label> ชั้น</label>
+										<select id="floor" style="font-size:18px; height:45px;" class="w3-input w3-border" name="select">
+                                                 <option value=""></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+									</div>
+								</div>
+							</div>
+							<div class="w3-row-padding" style="margin:2 -20px">
+								<div class="w3-row-padding" style="margin:2 -8px;">
+									<div class="w3-half w3-margin-bottom">
+										<label> ห้อง</label>
+										<select id="room" style="font-size:18px; height:45px;" class="w3-input w3-border">
+                                                <option value="all">ทุกห้อง </option>
+                                                <option value="107">107 </option>
+                                                <option value="111">111 </option>
+                                                <option value="213">213 </option>
+                                                <option value="301-1">301/1 </option>
+                                                <option value="301-2">301/2 </option>
+                                                <option value="301-3">301/3 </option>
+                                                <option value="304">304 </option>
+                                                <option value="r1">ห้องประชุม1 </option>
+                                                <option value="r2">ห้องประชุม2 </option>
+                                            </select>
+									</div>
+								</div>
+							</div>
+							<div class="w3-row-padding" style="margin:2 -20px">
+								<div class="w3-row-padding" style="margin:2 -8px;">
+									<div class="w3-half w3-margin-bottom">
+										<label> จำนวนผู้ใช้ </label>
+										<input id="numuser" style="font-size:18px; height:45px;" placeholder="Ex. 50" min="1" max="999" class="w3-input w3-border"
+											type="number" name="NumUser">
+									</div>
+								</div>
+							</div>
 
-                            <div class="w3-row-padding" style="margin:2 -20px"> 
-                                <div class="w3-row-padding" style="margin:2 -8px;">
-                                    <div class="w3-row-padding">
-                                        <div class="w3-col m5">
-                                            <button class="w3-btn w3-padding-16 w3-large w3-margin-top"  onclick="window.location.href='schedule.html'"> ย้อนกลับ </button>
-                                        </div> 
-                                        <div class="w3-col m5">
-                                            <button class="w3-btn w3-padding-13 w3-small w3-margin-top"> RESET </button>
-                                        </div> 
-                                        <div class="w3-col m1">
-                                            <button class="w3-btn w3-padding-16 w3-large w3-margin-top"> ค้นหา </button>
-                                        </div> 
-                                    </div>
-                                </div>
-                            </div>
+						</form>
+
+						<div class="w3-row-padding" style="margin:2 -20px">
+							<div class="w3-row-padding" style="margin:2 -8px;">
+								<div class="w3-row-padding">
+									<div class="w3-col m1">
+										&nbsp;
+									</div>
+									<div class="w3-col m10" style="text-align:center">
 
 
-                        </div>
+										<button onclick="window.location.href='schedule.html'" class="button button2">ย้อนกลับ</button>
+										<button onclick="rere()" style="margin:30px;" class="re"> RESET </button>
+										<button class="button button1" id="sear" onClick="clog(this.name)" style="">ค้นหา</button>
+
+
+									</div>
+									<div class="w3-col m1">
+										&nbsp;
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="id01" class="modal">
+							<form id="idlog" class="modal-content animate" action="confirm.html" method="POST">
+								<div class="imgcontainer">
+									<span onclick="document.getElementById('id01').style.display='none';document.getElementById('ames').innerHTML=''" class="close"
+										title="Close Modal">&times;</span>
+
+									<h1>ยืนยันตัวตน</h1>
+									<hr>
+								</div>
+
+								<div class="containBig">
+									<alertmes id="ames"> </alertmes><br>
+
+									<img src="img/user.png" style="margin-bottom:3px" width="20" height="20" alt="us"><input class="inputTP" style="font-size:20px"
+										type="text" placeholder=" ชื่อผู้ใช้" name="uname" required>
+									<br>
+									<br>
+
+									<img src="img/password.png" style="margin-bottom:3px" width="20" height="20" alt="pas"><input class="inputTP" style="font-size:20px"
+										type="password" placeholder=" รหัสผ่าน" name="psw" required><br>
+									<br>
+									<button class="buttonD" type="submit" onclick="setData()">ลงชื่อเข้าใช้</button><br>
+									<input class="inputTP" type="checkbox" checked="checked"><br>Remember me
+
+								</div>
+
+							</form>
+						</div>
+						<script>
+                                $("#sear").click(function() {
+                                    $('html, body').animate({
+                                        scrollTop: $("#section2").offset().top
+                                    }, 750);
+                                });
+
+                                
+                            </script>
+
+					</div>
 
 
 
 
-                    </div>
-                </div>
-            </div>
+				</div>
+			</div>
+		</div>
 
 
 
-        </header>   
+	</header>
 
 
 
-        <div class="w3-content" style="max-width:1532px;">
-            <!--Second-->
-            <div id="section2" class="container-fluid">
-                <h1>Section 2</h1>
+	<div class="w3-content" style="max-width:1532px;font-size:18px;">
+		<!--Second-->
+		<div id="section2" class="container-fluid">
+			<h1 style="text-align:center;font-size:50px;">ผลการค้นหา</h1>
 
-                <!-- First Grid -->
-                <div class="container">
-                    <h2>ผลการค้นหาห้อง</h2>
+			<!-- First Grid -->
+			<div class="container">
+				<h2 style="font-size:25px;">ผลการค้นหาห้องใช้เวลาทั้งหมด
+					<aa id="aa"></aa>  (0.02 วินาที) </h2><br>
 
-
-
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>
-                                    <input  type="checkbox" name="optiona" id="selectAll" checked />
-                                    <span class="checkboxtext">
+				<style>
+					tr#list:hover {
+						background-color: gray;
+					}
+				</style>
+				<input onclick="toggleCheckBox(this)" type="checkbox" name="optiona" id="selectAll" unchecked />
+				<span class="checkboxtext">
                                         เลือกทั้งหมด
                                     </span>
-                                </th>
+				<table id="table_id" class="display" style="color:black">
+
+					<thead>
+
+						<tr>
+
+							<th>วัน </th>
+							<th> วันที่ </th>
+							<th> เวลา </th>
+							<th> ความจุห้อง </th>
+							<th> ชั้น </th>
+							<th> ห้อง </th>
+						</tr>
+					</thead>
+					<tbody>
+						<!--first line-->
+						<tr id="list">
+							<td> <input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
+							<td>8/3/2560</td>
+							<td> เวลา 8:00-9:30</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+						</tr>
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
+							<td> 8/3/2560 </td>
+							<td> เวลา 9:30-11:00</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+						</tr>
+                        
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
+							<td> 8/3/2560 </td>
+							<td> เวลา 11:00-12:30</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
+							<td> 8/3/2560 </td>
+							<td> เวลา 13:30-15:00</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+                        <tr id="list">
+							<td> <input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
+							<td> 9/3/2560 </td>
+							<td> เวลา 8:00-9:30</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+						</tr>
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
+							<td> 9/3/2560 </td>
+							<td> เวลา 9:30-11:00</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+						</tr>
+                        
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
+							<td> 9/3/2560 </td>
+							<td> เวลา 11:00-12:30</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
+							<td> 9/3/2560 </td>
+							<td> เวลา 13:30-15:00</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
 
 
-                                <th> </th>
-                                <th> </th>
-                                <th> </th>
-                                <th> </th>
-                                <th>
+                        <tr id="list">
+							<td> <input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
+							<td> 10/3/2560 </td>
+							<td> เวลา 8:00-9:30</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+						</tr>
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
+							<td> 10/3/2560 </td>
+							<td> เวลา 9:30-11:00</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+						</tr>
+                        
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
+							<td> 10/3/2560 </td>
+							<td> เวลา 11:00-12:30</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
 
-                                    <!--Increate-->
-                                    <label> จัดเรียงตาม</label>
-                                    <select class="form-control" id="adults">
-                                        <option>ความจุห้อง</option>
-                                        <option>วัน</option>
-                                        <option>เวลา</option>
-                                        <option>ชั้น</option>
-                                    </select>
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
+							<td> 10/3/2560 </td>
+							<td> เวลา 13:30-15:00</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
 
-                                </th>
+                        <tr id="list">
+							<td> <input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
+							<td> 11/3/2560 </td>
+							<td> เวลา 8:00-9:30</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+						</tr>
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
+							<td> 11/3/2560 </td>
+							<td> เวลา 9:30-11:00</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+						</tr>
+                        
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
+							<td> 11/3/2560 </td>
+							<td> เวลา 11:00-12:30</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
 
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
+							<td> 11/3/2560 </td>
+							<td> เวลา 13:30-15:00</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!--first line-->
-                            <tr>
-                                <td>
-                                    <form action="demo_form.asp" method="get">
-                                        <input type="checkbox" name="vehicle" value="Bike"> วันจันทร์  ที่  31/10/2559 <br>
+                        <tr id="list">
+							<td> <input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
+							<td> 12/3/2560 </td>
+							<td> เวลา 8:00-9:30</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+						</tr>
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
+							<td> 12/3/2560 </td>
+							<td> เวลา 9:30-11:00</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+						</tr>
+                        
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
+							<td> 12/3/2560 </td>
+							<td> เวลา 11:00-12:30</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
 
-                                    </form>
-                                </td>
-                                <td> เวลา 9:30-11:00</td>
-                                <td> ความจุห้อง 20 คน</td>
-                                <td> ชั้น  2</td>
-                                <td>
-                                    <p>ห้อง 207 
-                                        <a href="#">
-                                            <span class="glyphicon glyphicon-info-sign"></span>
-                                        </a>
-                                    </p>
-                                </td>
-                            </tr>
-                            <!--second line-->
-                            <tr>
-                                <td>
-                                    <form action="demo_form.asp" method="get">
-                                        <input type="checkbox" name="vehicle" value="Bike"> วันอังคาร  ที่  1/11/2559 <br>
-
-                                    </form>
-                                </td>
-                                <td> เวลา 9:30-11:00</td>
-                                <td> ความจุห้อง 20 คน</td>
-                                <td> ชั้น  2</td>
-                                <td>
-                                    <p>ห้อง 207 
-                                        <a href="#">
-                                            <span class="glyphicon glyphicon-info-sign"></span>
-                                        </a>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <form action="demo_form.asp" method="get">
-                                        <input type="checkbox" name="vehicle" value="Bike"> วันพุธ  ที่  2/11/2559 <br>
-
-                                    </form>
-                                </td>
-                                <td> เวลา 9:30-11:00</td>
-                                <td> ความจุห้อง 20 คน</td>
-                                <td> ชั้น  2</td>
-                                <td>
-                                    <p>ห้อง 207   
-                                        <a href="#">
-                                            <span class="glyphicon glyphicon-info-sign"></span>
-                                        </a>
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-
-
-                <div class="w3-row-padding" style="margin:2 -20px"> 
-                    <div class="w3-row-padding" style="margin:2 -8px;">
-                        <div class="w3-row-padding">
-                           
-                            <div class="w3-col m5">
-                                <button class="w3-btn w3-padding-16 w3-large w3-margin-top"> ย้อนกลับ </button>
-                            </div> 
-                            <div class="w3-col m5">
-                                <button class="w3-btn w3-padding-16 w3-large w3-margin-top"> ยืนยันการจอง </button>
-                            </div> 
-                            
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-
-
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
+							<td> 12/3/2560 </td>
+							<td> เวลา 13:30-15:00</td>
+							<td> ความจุห้อง 60 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
 
 
-    </body>
 
-    <style>
-        footer{
-            width:100%;
-            height:40px;
-            margin-top:50px;
-            position:relative;
-            clear: both;
-            background-color:#630;
-        }   
-    </style>
-    <footer>
-	    <p style="color:#FFF;font-size:20px;text-align:center;font-family:'Century Gothic';">&#169; 2016 ROOM FOR U, All Rights Reserved</p>
-    </footer>
+
+                        <!--- start room 111 -->
+
+
+                        <tr id="list">
+							<td> <input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
+							<td> 8/3/2560 </td>
+							<td> เวลา 8:00-9:30</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+						</tr>
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
+							<td> 8/3/2560 </td>
+							<td> เวลา 9:30-11:00</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+						</tr>
+                        
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
+							<td> 8/3/2560 </td>
+							<td> เวลา 11:00-12:30</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
+							<td> 8/3/2560 </td>
+							<td> เวลา 13:30-15:00</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+                        <tr id="list">
+							<td> <input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
+							<td> 9/3/2560 </td>
+							<td> เวลา 8:00-9:30</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+						</tr>
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
+							<td> 9/3/2560 </td>
+							<td> เวลา 9:30-11:00</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+						</tr>
+                        
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
+							<td> 9/3/2560 </td>
+							<td> เวลา 11:00-12:30</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
+							<td> 9/3/2560 </td>
+							<td> เวลา 13:30-15:00</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+
+                        <tr id="list">
+							<td> <input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
+							<td> 10/3/2560 </td>
+							<td> เวลา 8:00-9:30</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+						</tr>
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
+							<td> 10/3/2560 </td>
+							<td> เวลา 9:30-11:00</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+						</tr>
+                        
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
+							<td> 10/3/2560 </td>
+							<td> เวลา 11:00-12:30</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
+							<td> 10/3/2560 </td>
+							<td> เวลา 13:30-15:00</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+                        <tr id="list">
+							<td> <input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
+							<td> 11/3/2560 </td>
+							<td> เวลา 8:00-9:30</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+						</tr>
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
+							<td> 11/3/2560 </td>
+							<td> เวลา 9:30-11:00</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+						</tr>
+                        
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
+							<td> 11/3/2560 </td>
+							<td> เวลา 11:00-12:30</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
+							<td> 11/3/2560 </td>
+							<td> เวลา 13:30-15:00</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+                        <tr id="list">
+							<td> <input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
+							<td> 12/3/2560 </td>
+							<td> เวลา 8:00-9:30</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+						</tr>
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
+							<td> 12/3/2560 </td>
+							<td> เวลา 9:30-11:00</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+						</tr>
+                        
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
+							<td> 12/3/2560 </td>
+							<td> เวลา 11:00-12:30</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+						<tr id="list">
+							<td><input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
+							<td> 12/3/2560 </td>
+							<td> เวลา 13:30-15:00</td>
+							<td> ความจุห้อง 50 คน</td>
+							<td> ชั้น 1</td>
+							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+						</tr>
+
+
+
+
+
+					</tbody>
+				</table>
+			</div>
+
+
+			<br>
+			<div class="w3-row-padding" style="">
+				<div class="w3-row-padding" style="">
+
+
+					<div class="w3-col m1">&nbsp; </div>
+					<div class="w3-col m10" style="text-align:center">
+
+						<button id="bb" class="button button2">ย้อนกลับ</button>
+						<label style="margin:30px;">&nbsp;</label>
+						<button class="button button1" name="id01" onClick="clog(this.name)">ยืนยันการจอง</button>
+
+
+					</div>
+					<div class="w3-col m1">&nbsp;</div>
+
+				</div>
+				<script>
+                   
+                        $("#bb").click(function() {
+                            $('html, body').animate({
+                                scrollTop: $("header").offset().top
+                            }, 750);
+                        });
+                    </script>
+			</div>
+
+		</div>
+
+
+	</div>
+
+</body>
+
+<style>
+	footer {
+		width: 100%;
+		height: 40px;
+		position: relative;
+		clear: both;
+		background-color: #630;
+	}
+</style>
+
+<script>
+
+        function toggleCheckBox(source) {
+            var checkboxes = document.getElementsByName('vehicle');
+            for(var i=0, n=checkboxes.length;i<n;i++) {
+                checkboxes[i].checked = source.checked;
+            }
+        }
+        $(document).ready(function(){
+            $('#table_id').DataTable();
+        });
+      
+    function rere(){
+        var d = new Date();
+        var dd = d.getDate();
+        var mm = d.getMonth()+1;
+        var yy = d.getFullYear();
+        if(dd<10) dd = "0"+dd;
+        if(mm<10) mm = "0"+mm;
+        var date =dd+"/"+mm+"/"+yy;
+        $('#datep').val(date);
+        $('#datepp').val(date);
+        $("#datep").val(date);
+        $("#datepp").val(date);
+        $("#numuser").val("");
+        $("#room").val("all");
+        $("#floor").val("");
+        $(".selectTime").val("");
+        $(".selectTimeTo").val("");
+
+        $("#selectAllGroup1").prop("checked", false);
+         $("#group1_mon").prop("checked", false);
+         $("#group1_tues").prop("checked", false);
+         $("#group1_wed").prop("checked", false);
+         $("#group1_thurs").prop("checked", false);
+         $("#group1_fri").prop("checked", false);
+         $("#group1_sat").prop("checked", false);
+        $("#group1_sun").prop("checked", false);
+       
+    }
+        
+var timeTo =["930t","1100t","1230t","1330t","1500t","1630t","1800t"];
+var timeTo2 =["930t2","1100t2","1230t2","1330t2","1500t2","1630t2","1800t2"];
+        $('.selectTime').change(function(){
+        if($(this).val() =="800f"){
+            //alert('asdsad');
+            for(var i=0;i<timeTo.length;i++){
+                $("#"+timeTo[i]).show();
+            }
+        }
+        else if($(this).val() =="930f"){
+            for(var i=0;i<timeTo.length;i++){
+                if(i<1) $("#"+timeTo[i]).hide();
+                else  $("#"+timeTo[i]).show();
+            }
+            $(".selectTimeTo").val("1100t");  
+        }
+        else if($(this).val() =="1100f"){
+            for(var i=0;i<timeTo.length;i++){
+                if(i<2) $("#"+timeTo[i]).hide();
+                else  $("#"+timeTo[i]).show();
+            }
+            $(".selectTimeTo").val("1230t");  
+        }
+        else if($(this).val() =="1330f"){
+            for(var i=0;i<timeTo.length;i++){
+                if(i<4) $("#"+timeTo[i]).hide();
+                else  $("#"+timeTo[i]).show();
+            }
+            $(".selectTimeTo").val("1500t");  
+        }
+        else if($(this).val() =="1500f"){
+            for(var i=0;i<timeTo.length;i++){
+                if(i<5) $("#"+timeTo[i]).hide();
+                else  $("#"+timeTo[i]).show();
+            }
+            $(".selectTimeTo").val("1630t");  
+        }
+        else if($(this).val() =="1630f"){
+            for(var i=0;i<timeTo.length;i++){
+                if(i<6) $("#"+timeTo[i]).hide();
+                else  $("#"+timeTo[i]).show();
+            }
+            $(".selectTimeTo").val("1800t");  
+        }
+    })
+    
+    $('.selectTime2').change(function(){
+        if($(this).val() =="800f2"){
+            //alert('asdsad');
+            for(var i=0;i<timeTo2.length;i++){
+                $("#"+timeTo2[i]).show();
+            }
+        }
+        else if($(this).val() =="930f2"){
+            for(var i=0;i<timeTo2.length;i++){
+                if(i<1) $("#"+timeTo2[i]).hide();
+                else  $("#"+timeTo2[i]).show();
+            }
+            $(".selectTimeTo2").val("1100t2");  
+        }
+        else if($(this).val() =="1100f2"){
+            for(var i=0;i<timeTo2.length;i++){
+                if(i<2) $("#"+timeTo2[i]).hide();
+                else  $("#"+timeTo2[i]).show();
+            }
+            $(".selectTimeTo2").val("1230t2");  
+        }
+        else if($(this).val() =="1330f2"){
+            for(var i=0;i<timeTo2.length;i++){
+                if(i<4) $("#"+timeTo2[i]).hide();
+                else  $("#"+timeTo2[i]).show();
+            }
+            $(".selectTimeTo2").val("1500t2");  
+        }
+        else if($(this).val() =="1500f2"){
+            for(var i=0;i<timeTo2.length;i++){
+                if(i<5) $("#"+timeTo2[i]).hide();
+                else  $("#"+timeTo2[i]).show();
+            }
+            $(".selectTimeTo2").val("1630t2");  
+        }
+        else if($(this).val() =="1630f2"){
+            for(var i=0;i<timeTo2.length;i++){
+                if(i<6) $("#"+timeTo2[i]).hide();
+                else  $("#"+timeTo2[i]).show();
+            }
+            $(".selectTimeTo2").val("1800t2");  
+        }
+    })
+    
+    
+
+    </script>
+<footer>
+	<p style="color:#FFF;font-size:20px;text-align:center;font-family:'Century Gothic';">&#169; 2016 ROOM FOR U, All Rights Reserved</p>
+</footer>
+
 </html>

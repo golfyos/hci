@@ -13,8 +13,7 @@ h2{
 }
 body{
     /*background-color: #99CCFF;*/
-  
-    background-color:#d3f8fe;
+    background-color:#FFCC33;
         -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
         -ms-animation: fadein 2s; /* Internet Explorer */
@@ -74,7 +73,7 @@ p#textR{
     font-size:15px;
 }
 
-.button1 {
+.button11 {
     /* margin-bottom: 20px;
     margin-top: 10px;*/
     background-color: cyan; /* Green */
@@ -91,11 +90,51 @@ p#textR{
     margin-top:0px;
     border:3px solid black
 }
-.button1:hover{
+.button11:hover{
     background-color:dodgerblue;
 }
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width:180px;
+}
 
+.button1 {
+    background-color:#F60; 
+    color: #FFF; 
+    border: 2px solid #F60;
+    
+}
+
+.button1:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button2 {
+    background-color: #630;
+    color: white;
+    border: 2px solid #630;
+}
+
+.button2:hover {
+    background-color: white; 
+    color: black; 
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 .buttonHelp{
+    background-color:cornsilk;
     border-radius: 12px;
     font-size:15px;
     border-style: solid;
@@ -139,6 +178,31 @@ td, th {
 td{
     font-size:18px;
 }
+
+
+table.tableTD td.cantTick{
+    background-color:black;
+    color:white;
+}
+
+table.tableTD th{
+    background-color:#FFFF59;
+    border-color:black;
+}
+table.tableTD td:nth-child(1){
+    background-color:#FFFF59;
+    border-color:black;
+}
+table.tableTD td{
+    background-color:#FFFF99;
+    
+    border-bottom-color: black;
+    border-right-color:black;
+}
+
+
+
+
 
 tr:nth-child(1) {
     background-color: #dddddd;
@@ -198,9 +262,7 @@ select{
     
 }
 
-.cantTick{
-    background-color:black;
-}
+
 
 labela{
     font-size:22px;
@@ -215,6 +277,12 @@ input[type=radio]{
    height:15px; 
    width:15px; 
    vertical-align: middle;
+}
+
+input[type=number]{
+    
+   width:100px; 
+   
 }
 label{
     cursor:pointer;

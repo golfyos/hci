@@ -17,6 +17,7 @@ window.onclick = function(event) {
             break;
         }
     }
+    //alert(event.target.className);
   
 
     var evt = event.target;
@@ -51,18 +52,22 @@ window.onclick = function(event) {
     //alert(evt.className+" "+evt.value);
     
     if(evt.id=="days"){
-        $("table").fadeOut();
+        $("table").fadeOut(10);
         for(var i=0;i<54;i++){
-            if( $('#'+idAllRoom[i]).hasClass("cantTick")){
+            if( $('#'+idAllRoom[i]).hasClass("cantTick") && (i!=40) && (i!=39) && i!=15 && i!=13){
                 //$('#'+idAllRoom[i]).attr("class","tableT");
                 $('#'+idAllRoom[i]).addClass("tableT");
                 //$('#'+idAllRoom[i]).val("unticked");
                 $('#'+idAllRoom[i]).removeClass("cantTick");
                 $('#'+idAllRoom[i]).val("unticked");
             // alert("abc");
-            }   
-            $('#'+idAllRoom[i]).html('');
-            $('#'+idAllRoom[i]).val("unticked");
+            } 
+            else if(i==39 || i==40 || i==13 || i==15){
+                $('#'+idAllRoom[i]).removeClass("tableT");
+                 $('#'+idAllRoom[i]).addClass("cantTick");
+            }
+            /*$('#'+idAllRoom[i]).html('');
+            $('#'+idAllRoom[i]).val("unticked");*/
         }
         //$('.tableTD').load();
          

@@ -41,13 +41,14 @@ audio:not([controls]) {
 }
 
 html {
-  font-family: sans-serif;
+   
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
+  
 }
 
 a:focus {
@@ -63,8 +64,10 @@ h{
 }
 
 h1 {
+  
   margin: 0.67em 0;
   font-size: 2em;
+  
 }
 
 abbr[title] {
@@ -296,6 +299,7 @@ table {
 }
 
 html {
+  
   font-size: 62.5%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -432,7 +436,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Trirong', serif;
   font-weight: 500;
   line-height: 1.1;
 }

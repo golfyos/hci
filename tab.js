@@ -7,9 +7,11 @@ $(function() {
 
         $(this).addClass('current');
         $('#' + tabId).addClass('current');
+        tabSelect = tabId;
+        
     });
-
+    
 });
-
+var tabSelect = "tab1";
 
 

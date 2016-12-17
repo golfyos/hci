@@ -67,7 +67,7 @@
 				</li>
 
 				<li data-slide="3" class="col-sm-2">
-					<a id="menu-link-3" href="./index.html#slide-3"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">วิธีการจองและยกเลิก</span></a>
+					<a id="menu-link-3" href="./index.html#slide-5"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">วิธีการจองและยกเลิก</span></a>
 				</li>
 
 				<li data-slide="6" class="col-sm-1"><a id="menu-link-5" href="./index.html#slide-6"><span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">ติดต่อ</span></a></li>
@@ -89,21 +89,21 @@
 
 
 	<h1>เลือกห้องที่ต้องการจอง
-		<a href="./index.html#slide-3"> <img src="img/qmark.png" width="25" height="25" border="0"></a>
+		<a href="./index.html#slide-5"> <img src="img/qmark.png" width="25" height="25" border="0"></a>
 	</h1>
 
 	<div class="container">
 		<div class="tab-example">
 			<ul class="tabs">
-				<li style="font-size:28px" class="tab-link current" data-tab="tab1">บร.2</li>
-				<li style="font-size:28px" class="tab-link" data-tab="tab2">อาคารอื่นๆ </li>
+				<li style="font-size:28px;" class="tab-link current" data-tab="tab1">บร.2</li>
+				<li style="font-size:28px;" class="tab-link" data-tab="tab2" >อาคารอื่นๆ </li>
 
 			</ul>
             <style>
                 
             </style>
 			<div class="wrapperHalf">
-				<div class="tab-contents">
+				<div class="tab-contents" style="border:solid black" >
 					<div class="tab-pane current" id="tab1">
 						<div class "row">
 							<div class="col-md-3">
@@ -127,7 +127,7 @@
                             </select></div>
 							<div class="col-md-5">
 								<div class="wrapperR">
-									<button class="buttonHelp" onclick="window.location.href='helproom.html'"><img src="img/glass.png" style="margin-bottom:3px" width="20" height="20"> ระบบช่วยค้นหาห้อง</button>
+									<button class="buttonHelp" onClick="window.location.href='helproom.html'"><img src="img/search.png" style="margin-bottom:3px" width="20" height="20"> ระบบช่วยค้นหาห้องว่าง</button>
 								</div>
 							</div>
 							<div class="col-md-1"> </div>
@@ -136,12 +136,15 @@
 
 						<br>
 						<br>
+						
 						<div class="left">
+							<p id="note"> ***กรุณาคลิกที่ช่องว่าง ตามเวลาที่ต้องการ หรือ คลิกอีกครั้งเพื่อยกเลิก
+							<p>
 							<table class="tableTD" border="3" BORDERCOLORLIGHT="gray">
 								<tr>
 									<th width="12%">
-										<div class="wrapperR">ห้อง\เวลา</th>
-									</div>
+										<div class="wrapperR">ห้อง\เวลา
+									</div></th>
 									<th>8:00 - 9:30</th>
 									<th>9:30 - 11:00</th>
 									<th>11:00 - 12:30</th>
@@ -153,7 +156,7 @@
 
 								<tr id="107" class="gAll">
 									<td>
-										<div class="wrapperR">(Lab) 107 <img name="id107" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+										<div class="wrapperR">(Lab) 107 <img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 											<br>
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 60</td>
@@ -169,7 +172,7 @@
 								</tr>
 								<tr id="111" class="gAll">
 									<td>
-										<div class="wrapperR">(Lab) 111 <img name="id111" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+										<div class="wrapperR">(Lab) 111 <img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 											<br>
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 50</td>
@@ -184,7 +187,7 @@
 								</tr>
 								<tr id="213" class="gAll">
 									<td>
-										<div class="wrapperR">(Lab) 213 <img name="id213" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+										<div class="wrapperR">(Lab) 213 <img name="id213" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 											<br>
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 50</td>
@@ -200,7 +203,7 @@
 
 								<tr id="301-1" class="gAll">
 									<td>
-										<div class="wrapperR">301/1 <img name="id301-1" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+										<div class="wrapperR">301/1 <img name="id301-1" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 											<br>
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 30</td>
@@ -215,7 +218,7 @@
 								</tr>
 								<tr id="301-2" class="gAll">
 									<td>
-										<div class="wrapperR">301/2 <img name="id301-2" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+										<div class="wrapperR">301/2 <img name="id301-2" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 											<br>
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 35</td>
@@ -230,7 +233,7 @@
 								</tr>
 								<tr id="301-3" class="gAll">
 									<td>
-										<div class="wrapperR">301/3 <img name="id301-3" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+										<div class="wrapperR">301/3 <img name="id301-3" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 											<br>
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 35</td>
@@ -245,7 +248,7 @@
 								</tr>
 								<tr id="304" class="gAll">
 									<td>
-										<div class="wrapperR">304 <img name="id304" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+										<div class="wrapperR">304 <img name="id304" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 											<br>
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 60</td>
@@ -260,7 +263,7 @@
 								</tr>
 								<tr id="r1" class="gAll">
 									<td>
-										<div class="wrapperR">ประชุม1 <img name="idr1" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+										<div class="wrapperR">ประชุม1 <img name="idr1" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 											<br>
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 20</td>
@@ -275,7 +278,7 @@
 								</tr>
 								<tr id="r2" class="gAll">
 									<td>
-										<div class="wrapperR">ประชุม2 <img name="idr2" onclick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+										<div class="wrapperR">ประชุม2 <img name="idr2" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 											<br>
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 30</td>
@@ -288,15 +291,35 @@
 									<td class="" id="r2-15001630"></td>
 									<td class="" id="r2-16301800"></td>
 								</tr>
+								
+								<tr>
+									<th width="12%">
+										<div class="wrapperR">ห้อง\เวลา
+									</div></th>
+									<th>8:00 - 9:30</th>
+									<th>9:30 - 11:00</th>
+									<th>11:00 - 12:30</th>
+									<th>พัก</th>
+									<th>13:30 - 15:00</th>
+									<th>15:00 - 16:30</th>
+									<th>16:30 - 18:00</th>
+								</tr>
+								
+
+								
 						</div>
 						</table>
+						<div class="wrapper">
+							<button class="button button2" onClick="window.location.href='index.html'">ย้อนกลับ</button>
+							<label style="margin:30">&nbsp;</label>
+							<button class="button button1"  name="id01" onClick="clog(this.name)">ยืนยันการจอง</button>
 						<br>
-
+						</div>
 
 						<div id="id107" class="modal">
 							<form class="modal-content animate" action="">
 								<div class="imgcontainer">
-									<span onclick="document.getElementById('id107').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<span onClick="document.getElementById('id107').style.display='none'" class="close" title="Close Modal">&times;</span>
 									<h1>ห้อง 107</h1>
 									<hr>
 								</div>
@@ -314,7 +337,7 @@
 						<div id="id111" class="modal">
 							<form class="modal-content animate" action="">
 								<div class="imgcontainer">
-									<span onclick="document.getElementById('id111').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<span onClick="document.getElementById('id111').style.display='none'" class="close" title="Close Modal">&times;</span>
 
 									<h1>ห้อง 111</h1>
 									<hr>
@@ -332,7 +355,7 @@
 						<div id="id213" class="modal">
 							<form class="modal-content animate" action="">
 								<div class="imgcontainer">
-									<span onclick="document.getElementById('id213').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<span onClick="document.getElementById('id213').style.display='none'" class="close" title="Close Modal">&times;</span>
 
 									<h1>ห้อง 213</h1>
 									<hr>
@@ -352,7 +375,7 @@
 						<div id="id301-1" class="modal">
 							<form class="modal-content animate" action="">
 								<div class="imgcontainer">
-									<span onclick="document.getElementById('id301-1').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<span onClick="document.getElementById('id301-1').style.display='none'" class="close" title="Close Modal">&times;</span>
 
 									<h1>ห้อง 301/1</h1>
 									<hr>
@@ -370,7 +393,7 @@
 						<div id="id301-2" class="modal">
 							<form class="modal-content animate" action="">
 								<div class="imgcontainer">
-									<span onclick="document.getElementById('id301-2').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<span onClick="document.getElementById('id301-2').style.display='none'" class="close" title="Close Modal">&times;</span>
 
 									<h1>ห้อง 301/2</h1>
 									<hr>
@@ -388,7 +411,7 @@
 						<div id="id301-3" class="modal">
 							<form class="modal-content animate" action="">
 								<div class="imgcontainer">
-									<span onclick="document.getElementById('id301-3').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<span onClick="document.getElementById('id301-3').style.display='none'" class="close" title="Close Modal">&times;</span>
 
 									<h1>ห้อง 301/3</h1>
 									<hr>
@@ -406,7 +429,7 @@
 						<div id="id304" class="modal">
 							<form class="modal-content animate" action="">
 								<div class="imgcontainer">
-									<span onclick="document.getElementById('id304').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<span onClick="document.getElementById('id304').style.display='none'" class="close" title="Close Modal">&times;</span>
 
 									<h1>ห้อง 304</h1>
 									<hr>
@@ -424,7 +447,7 @@
 						<div id="idr1" class="modal">
 							<form class="modal-content animate" action="">
 								<div class="imgcontainer">
-									<span onclick="document.getElementById('idr1').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<span onClick="document.getElementById('idr1').style.display='none'" class="close" title="Close Modal">&times;</span>
 
 									<h1>ห้องประชุม1</h1>
 									<hr>
@@ -442,7 +465,7 @@
 						<div id="idr2" class="modal">
 							<form class="modal-content animate" action="">
 								<div class="imgcontainer">
-									<span onclick="document.getElementById('idr2').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<span onClick="document.getElementById('idr2').style.display='none'" class="close" title="Close Modal">&times;</span>
 
 									<h1>ห้องประชุม2 </h1>
 									<hr>
@@ -459,8 +482,7 @@
 
 
 
-						<p id="note"> ***กรุณาคลิกที่ช่องว่าง ตามเวลาที่ต้องการ หรือ คลิกอีกครั้งเพื่อยกเลิก
-							<p>
+						
 					</div>
 
 					<div class="right">
@@ -564,14 +586,14 @@
 						<div class="row">
 							<div class="col-md-3"></div>
 							<div class="col-md-9">
-								<label> <input type="radio" id="aaa"name="gender" value="always">  ประจำ (วันสอนต้องเป็นไปตาม section ที่แจ้งไปยังสำนักทะเบียนเท่านั้น)</label><br>
+								<label> <input type="radio" id="aaa"name="gender" value="always">  สอนประจำ (วันสอนต้องเป็นไปตาม section ที่แจ้งไปยังสำนักทะเบียนเท่านั้น)</label><br>
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-3"></div>
 							<div class="col-md-9">
 								<label> <input type="radio" name="gender" value="some"> 
-                               สอนชดเชยเป็นครั้งคราวใน วันที่</label> <input type="text" size="10" name="date" class="tcal"
+                               สอน ชดเชยเป็นครั้งคราวใน วันที่</label> <input type="text" size="10" name="date" class="tcal"
 									style="background-color:white" value="" />
 								<labelb>เวลาสอนตั้งแต่:</labelb>
 								<select class="selectTime" name="select">
@@ -599,7 +621,7 @@
 							<div class="col-md-3"></div>
 							<div class="col-md-9">
 								<label><input type="radio" name="gender" value="choose">
-                                สอบใน วันที่ </label> <input type="text" size="10" name="date" class="tcal" style="background-color:white"
+                                สอบ ในวันที่ </label> <input type="text" size="10" name="date" class="tcal" style="background-color:white"
 									value="" />
 								<labelb>เวลาสอบตั้งแต่: </labelb>
 								<select class="selectTime2" name="select">
@@ -642,6 +664,12 @@
 							<temp style="color:red;font-size:36px">*</temp> คือ จำเป็นต้องกรอกข้อมูลในช่อง
 						</div>
 					</div>
+					<div class="wrapper">
+							<button class="button button2" onClick="window.location.href='index.html'">ย้อนกลับ</button>
+							<label style="margin:30">&nbsp;</label>
+							<button class="button button1"  name="id01" onClick="window.location.href ='confirmForm.html'">ยืนยันการจอง</button>
+						<br>
+					</div>
 				</div>
 				<!--end tab pane2-->
 			</div>
@@ -663,9 +691,7 @@
 				<button class="button button11" onclick="window.location.href='index.html'"> ย้อนกลับ </button>
 				<button name="id01" class="button button11" onclick="clog(this.name)" style="width:auto;">ยืนยันการจอง</button> -->
                 
-                <button class="button button2" onClick="window.location.href='index.html'">ย้อนกลับ</button>
-                <label style="margin:30">&nbsp;</label>
-                <button class="button button1"  name="id01" onClick="clog(this.name)">ยืนยันการจอง</button>
+               
 
 				<!--<button class="button button1"> ยืนยันการจอง </button>-->
 
@@ -673,7 +699,7 @@
 				<div id="id01" class="modal">
 					<form name="test" id="idlog" class="modal-content animate"  onsubmit="getAction(); return false;" method="POST">
 						<div class="imgcontainer">
-							<span onclick="document.getElementById('id01').style.display='none';document.getElementById('ames').innerHTML=''" class="close"
+							<span onClick="document.getElementById('id01').style.display='none';document.getElementById('ames').innerHTML=''" class="close"
 								title="Close Modal">&times;</span>
 							<!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
 							<h1>ยืนยันตัวตน</h1>

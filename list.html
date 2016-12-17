@@ -1,257 +1,389 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Manage Room - RoomForU</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Manage Room - RoomForU</title>
 
 
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-       
-        <link rel="stylesheet" type="text/css" href="tab.css">
-        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-        <script src="tab.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="tcal.css"/>
-        <link href="dialogCSS.css" rel="stylesheet">
-	    
-		<script type="text/javascript" src="tcal.js"></script>
-        <script src="dialogJS.js"></script>
-     
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="tab.css">
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="tab.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="tcal.css" />
+	<link href="dialogCSS.css" rel="stylesheet">
+
+	<script type="text/javascript" src="tcal.js"></script>
+	<script src="dialogJS.js"></script>
 
 
-        <link rel="stylesheet" type="text/css" href="css/sty.css">	
-        <link rel="stylesheet" type="text/css" href="css/bootstrapS.css">
-        
-        <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
-        
-    
-        <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <!--Font Thai-->
-        <link href="https://fonts.googleapis.com/css?family=Athiti:300|Mitr:200" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Prompt:200,400" rel="stylesheet">
-        
-        
-        
-        
-        
-        <style>
+
+	<link rel="stylesheet" type="text/css" href="css/sty.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrapS.css">
+
+	<link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
+
+
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet'
+		type='text/css'>
+	<!--Font Thai-->
+	<link href="https://fonts.googleapis.com/css?family=Athiti:300|Mitr:200" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Prompt:200,400" rel="stylesheet">
+
+
+	<script src="dialogJS.js"></script>
+	<link href="dialogCSS.css" rel="stylesheet">
+
+	<style>
+		footer {
+			width: 100%;
+			height: 40px;
+			margin-top: 350px;
+			position: relative;
+			clear: both;
+			background-color: #630;
+		}
 		
-	footer{
-		width:100%;
-		height:40px;
-		margin-top:-40px;
-		position:relative;
-		clear: both;
-		background-color:#630;
-	}
-	body{
-		background-color:#FFF;
-		        -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2s; /* Firefox < 16 */
-        -ms-animation: fadein 2s; /* Internet Explorer */
-         -o-animation: fadein 2s; /* Opera < 12.1 */
-            animation: fadein 2s;
-	}
-	@keyframes fadein {
-		from { opacity: 0; }
-		to   { opacity: 1; }
-	}
-
-	/* Firefox < 16 */
-	@-moz-keyframes fadein {
-		from { opacity: 0; }
-		to   { opacity: 1; }
-	}
-
-	/* Safari, Chrome and Opera > 12.1 */
-	@-webkit-keyframes fadein {
-		from { opacity: 0; }
-		to   { opacity: 1; }
-	}
-
-	/* Internet Explorer */
-	@-ms-keyframes fadein {
-		from { opacity: 0; }
-		to   { opacity: 1; }
-	}
-
-	/* Opera < 12.1 */
-	@-o-keyframes fadein {
-		from { opacity: 0; }
-		to   { opacity: 1; }
-	}
-	table {
-		border-collapse: collapse;
-		width: 100%;
-	}
-	th{
-		font-family:JasmineUPC;
-		font-size:35px;
-		padding: 0px;
-		text-align: center;
-		border-bottom: 1px solid #ddd;
-		border-top:1px solid #ddd;
-		border-right:1px solid #ddd;
-		color:#FFF
-	}
-	.thicon{
-		border-bottom: 1px solid #ddd;
-		border-top:1px solid #ddd;
-		border-right:none;
-	}
-	.thclass{
-		border-right:none;
-	}
-	td{
-		font-size:18px;
-		padding: 8px;
-		text-align: center;
-		border-bottom: 1px solid #ddd;
-	}
-	.trhead{
-		background-color:#6CC
-	}
-	.trhead:hover{
-		background-color:#6CC
-	}
-	tr:hover{
-		background-color:#f5f5f5;
-	}
-	
-	/*Button Login*/
-	.myButton {
-		-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-		-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-		box-shadow:inset 0px 1px 0px 0px #ffffff;
-		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
-		background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-		background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-		background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-		background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
-		background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
-		background-color:#ffffff;
-		-moz-border-radius:4px;
-		-webkit-border-radius:4px;
-		border-radius:4px;
-		border:3px solid #dcdcdc;
-		display:inline-block;
-		cursor:pointer;
-		color:#666666;
-		font-family:Arial;
-		font-size:14px;
-		font-weight:bold;
-		padding:14px 30px;
-		text-decoration:none;
-		text-shadow:0px 1px 0px #ffffff;
-	}
-	.myButton:hover {
-		background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
-		background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-		background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-		background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-		background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
-		background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
-		background-color:#f6f6f6;
-	}
-	.myButton:active {
-		position:relative;
-		top:1px;
-	}
-	/*End Button Login*/
-
-
-
-</style>
+		body {
+			background-color: #FFF;
+			-webkit-animation: fadein 2s;
+			/* Safari, Chrome and Opera > 12.1 */
+			-moz-animation: fadein 2s;
+			/* Firefox < 16 */
+			-ms-animation: fadein 2s;
+			/* Internet Explorer */
+			-o-animation: fadein 2s;
+			/* Opera < 12.1 */
+			animation: fadein 2s;
+		}
+		
+		@keyframes fadein {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		/* Firefox < 16 */
+		
+		@-moz-keyframes fadein {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		/* Safari, Chrome and Opera > 12.1 */
+		
+		@-webkit-keyframes fadein {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		/* Internet Explorer */
+		
+		@-ms-keyframes fadein {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		/* Opera < 12.1 */
+		
+		@-o-keyframes fadein {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+		
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			background-color: #e9e9e9;
+		}
+		
+		th {
+			font-family: JasmineUPC;
+			font-size: 35px;
+			padding: 0px;
+			text-align: center;
+			border-bottom: 1px solid #ddd;
+			border-top: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			color: #FFF
+		}
+		
+		.thicon {
+			border-bottom: 1px solid #ddd;
+			border-top: 1px solid #ddd;
+			border-right: none;
+		}
+		
+		.thclass {
+			border-right: none;
+		}
+		
+		td {
+			font-size: 18px;
+			padding: 8px;
+			text-align: center;
+			border-bottom: 1px solid #ddd;
+		}
+		
+		.trhead {
+			background-color: #6CC
+		}
+		
+		.trhead:hover {
+			background-color: #6CC
+		}
+		
+		tr:hover {
+			background-color: #f5f5f5;
+		}
+		/*Button Login*/
+		
+		img {
+			cursor: pointer;
+		}
+		
+		.button {
+			background-color: #4CAF50;
+			/* Green */
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 18px;
+			margin: 4px 2px;
+			-webkit-transition-duration: 0.4s;
+			/* Safari */
+			transition-duration: 0.4s;
+			cursor: pointer;
+			width: 180px;
+		}
+		.button11{
+			background-color: #4CAF50;
+			/* Green */
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 18px;
+			margin: 4px 2px;
+			-webkit-transition-duration: 0.4s;
+			/* Safari */
+			transition-duration: 0.4s;
+			cursor: pointer;
+			width: 130px;
+		}
+		.button1 {
+			background-color: #F60;
+			color: #FFF;
+			border: 2px solid #F60;
+		}
+		
+		.button1:hover {
+			background-color: white;
+			color: black;
+			box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+		}
+		
+		.button2 {
+			background-color: #630;
+			color: white;
+			border: 2px solid #630;
+		}
+		
+		.button2:hover {
+			background-color: white;
+			color: black;
+			box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+		}
+		
+		.myButton {
+			-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+			-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+			box-shadow: inset 0px 1px 0px 0px #ffffff;
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+			background: -moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+			background: -webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+			background: -o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+			background: -ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+			background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+			filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6', GradientType=0);
+			background-color: #ffffff;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border-radius: 4px;
+			border: 3px solid #dcdcdc;
+			display: inline-block;
+			cursor: pointer;
+			color: #666666;
+			font-family: Arial;
+			font-size: 14px;
+			font-weight: bold;
+			padding: 14px 30px;
+			text-decoration: none;
+			text-shadow: 0px 1px 0px #ffffff;
+		}
+		
+		.myButton:hover {
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+			background: -moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+			background: -webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+			background: -o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+			background: -ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+			background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+			filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff', GradientType=0);
+			background-color: #f6f6f6;
+		}
+		
+		.myButton:active {
+			position: relative;
+			top: 1px;
+		}
+		/*End Button Login*/
+	</style>
 
 </head>
 
-<body>
+<body style="background-color:#FFCC33">
 	<div class="navbar navbar-fixed-top" data-activeslide="2" style="background-color:#630">
+
+
+		<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+
+		<div class="nav-collapse collapse navbar-responsive-collapse">
+			<ul class="nav row">
+				<div class="col-sm-3" style="text-align:left;padding-left:2%;">
+					<a href="./index.html"><img src="./images/logoWEB.png" width="80" height="50"></a>
+				</div>
+				<li data-slide="1" class="col-sm-1" style="">
+					<a id="menu-link-1" href="./index.html#slide-1"> <span class="text" style="color:#FFF; font-size:20px;font-family: 'Mitr', sans-serif;">หน้าหลัก</span></a>
+				</li>
+
+				<li data-slide="2" class="col-sm-1">
+					<a id="menu-link-2" href="./index.html#slide-2"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">เกี่ยวกับ</span></a>
+				</li>
+
+				<li data-slide="3" class="col-sm-2">
+					<a id="menu-link-3" href="./index.html#slide-5"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">วิธีการจองและยกเลิก</span></a>
+				</li>
+
+				<li data-slide="6" class="col-sm-1"><a id="menu-link-5" href="./index.html#slide-6"><span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">ติดต่อ</span></a></li>
+
+				<li data-slide="1" class="col-sm-2">
+					<a id="menu-link-1" href="./index.html#slide-1"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a>
+				</li>
+				<div class="col-sm-0"></div>
+				<div class="col-sm-2" style="text-align:right"><a href="#" class="myButton">เข้าสู่ระบบ</a></div>
+
+			</ul>
+
+		</div>
+		<!-- /.nav-collapse -->
+
+	</div>
+	<!-- /.navbar -->
+	<br> <br> <br> <br>
+	<h1 style="font-family:JasmineUPC;font-size:50px;text-align:center">รายการห้องที่จอง</h1>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-2"></div>
+
+			<table class="col-sm-8">
+				<tr class="trhead">
+					<th>วันที่</th>
+					<th>เวลา</th>
+					<th>ชนิดห้อง</th>
+					<th>ความจุ</th>
+					<th>ชั้น</th>
+					<th class="thclass">เลขห้อง</th>
+					<th class="thicon"></th>
+				</tr>
+				<tr>
+					<td>7/4/2017</td>
+					<td>9.30-12.30</td>
+					<td>ห้องเรียน</td>
+					<td>60</td>
+					<td>3</td>
+					<td>304</td>
+					<td><img  name="id01"onclick="clog(this.name)"style="width:35px;height:35px;" src="images/delete.png" /></td>
+				</tr>
+
+				<tr>
+					<td>9/3/2560</td>
+					<td>8.00-9.30</td>
+					<td>ห้องเรียน</td>
+					<td>60</td>
+					<td>1</td>
+					<td>107</td>
+					<td><img  name="id01"onclick="clog(this.name)"style="width:35px;height:35px;" src="images/delete.png" /></td>
+				</tr>
+				<tr>
+					<td>8/3/2560</td>
+					<td>13.30-15.00</td>
+					<td>ห้องเรียน</td>
+					<td>50</td>
+					<td>1</td>
+					<td>111</td>
+					<td><img name="id01"onclick="clog(this.name)" style="width:35px;height:35px;" src="images/delete.png" /></td>
+				</tr>
+			</table>
+
+			<div class="col-sm-2"></div>
+		</div>
+
+		<div class="row" style="text-align:center;margin-top:30px;">
+			<button class="button button2" onClick="window.location.href='index.html'">ย้อนกลับ</button>
+			<label style="margin-left:30;margin-right:30">&nbsp;</label>
+			<button class="button button1" onClick="window.location.href='schedule.html'">จองห้อง</button>
+		</div>
+	</div>
+
+
+
+
+	<div id="id01" class="modal">
+		<form name="test" id="idlog" class="modal-content animate" onsubmit="getAction(); return false;" method="POST">
+			<div class="imgcontainer" style="margin-top:50px;">
+				<!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+				<h1>คุณแน่ใจที่จะยกเลิกรายนี้ใช่ไหม</h1>
+				<hr>
+			</div>
+			<div class="containBig" style="margin-bottom:50px;">
+				<button class="button11">YES</button>
+				<l style="margin-left:30px; "></l>
+				<button class="button11" onclick="document.getElementById('id01').style.display='none'" style="background-color:red">NO</button>
+			</div>
 		
-		
-			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+		</form>
+	</div>
+
 	
-			<div class="nav-collapse collapse navbar-responsive-collapse" >
-				<ul class="nav row" >
-<div class="col-sm-3" style="text-align:left;padding-left:2%;"><a href="./index.html"><img src="./images/logoWEB.png" width="80" height="50"></a></div>                       	
-<li data-slide="1" class="col-sm-1" style=""><a id="menu-link-1" href="./index.html#slide-1" > <span class="text"  style="color:#FFF; font-size:20px;font-family: 'Mitr', sans-serif;" >หน้าหลัก</span></a></li>
-
-<li data-slide="2" class="col-sm-1"><a id="menu-link-2" href="./index.html#slide-2"  > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">เกี่ยวกับ</span></a></li>
-
-<li data-slide="3" class="col-sm-2"><a id="menu-link-3" href="./index.html#slide-3" > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">วิธีการจองและยกเลิก</span></a></li>
-
-<li data-slide="6" class="col-sm-1"><a id="menu-link-5" href="./index.html#slide-6"><span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">ติดต่อ</span></a></li>
-
-<li data-slide="1" class="col-sm-2"><a id="menu-link-1" href="./index.html#slide-1" > <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a></li>
-<div class="col-sm-0"></div> 
-<div  class="col-sm-2" style="text-align:right"><a href="#" class="myButton">เข้าสู่ระบบ</a></div>
-
-</ul>
-
-			</div><!-- /.nav-collapse -->
-  
-	</div><!-- /.navbar -->
-    <br> <br> <br> <br>
-    <h1 style="font-family:JasmineUPC;font-size:50px;text-align:center">รายการห้องที่จอง</h1>
-    <div style="height:760px">
-    <div class="col-sm-2"></div>
-    
-            <table class="col-sm-8">
-          <tr class="trhead">
-            <th>วันที่</th>
-            <th>เวลา</th>
-            <th>ชนิดห้อง</th>
-            <th>ความจุ</th>
-            <th>ชั้น</th>
-            <th class="thclass">เลขห้อง</th>
-            <th class="thicon"></th>
-          </tr>
-          <tr>
-            <td>1/1/2560</td>
-            <td>9.30-11.00</td>
-            <td>ห้องเรียน</td>
-            <td>40</td>
-            <td>3</td>
-            <td>304</td>
-            <td><img style="width:35px;height:35px;" src="images/deleteIco.png" /></td>
-          </tr>
-          <tr>
-           <td>1/1/2560</td>
-            <td>9.30-11.00</td>
-            <td>ห้องเรียน</td>
-            <td>40</td>
-            <td>3</td>
-            <td>304</td>
-            <td><img style="width:35px;height:35px;" src="images/deleteIco.png" /></td>
-          </tr>
-          <tr>
-            <td>1/1/2560</td>
-            <td>9.30-11.00</td>
-            <td>ห้องเรียน</td>
-            <td>40</td>
-            <td>3</td>
-            <td>304</td>
-            <td><img style="width:35px;height:35px;" src="images/deleteIco.png" /></td>
-          </tr>
-          <tr>
-            <td>1/1/2560</td>
-            <td>9.30-11.00</td>
-            <td>ห้องเรียน</td>
-            <td>40</td>
-            <td>3</td>
-            <td>304</td>
-            <td><img style="width:35px;height:35px;" src="images/deleteIco.png" /></td>
-          </tr>
-        </table>
-
-    <div class="col-sm-2"></div>
-    </div>
 </body>
 <footer>
-<p style="color:#FFF;font-size:20px;text-align:center;font-family:'Century Gothic';">ROOM FOR U</p>
+	<p style="color:#FFF;font-size:20px;text-align:center;font-family:'Century Gothic';">&#169; 2016 ROOM FOR U, All Rights Reserved</p>
 </footer>
+
 </html>

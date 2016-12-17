@@ -64,11 +64,11 @@
 	
 	#section2 {
 		padding-top: 50px;
-        padding-top: 50px;
+		padding-top: 50px;
 		height: 100%;
 		color: #fff;
 		background-color: limegreen;
-        position : relative;
+		position: relative;
 	}
 	
 	.checkboxtext {
@@ -195,6 +195,7 @@
 	}
 	
 	.button1 {
+		font-size: 20px;
 		background-color: #F60;
 		color: #FFF;
 		border: 2px solid #F60;
@@ -207,6 +208,7 @@
 	}
 	
 	.button2 {
+		font-size: 22px;
 		background-color: #630;
 		color: white;
 		border: 2px solid #630;
@@ -216,6 +218,23 @@
 		background-color: white;
 		color: black;
 		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	}
+	
+	.button3 {
+		font-size: 22px;
+		background-color: #930;
+		color: white;
+		border: 2px solid #C00;
+	}
+	
+	.button3:hover {
+		background-color: white;
+		color: black;
+		box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+	}
+	.imgClick{
+		margin-bottom:3px;
+		cursor: pointer;
 	}
 </style>
 <script>
@@ -259,7 +278,7 @@
 				</li>
 
 				<li data-slide="3" class="col-sm-2">
-					<a id="menu-link-3" href="./index.html#slide-3"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">วิธีการจองและยกเลิก</span></a>
+					<a id="menu-link-3" href="./index.html#slide-5"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">วิธีการจองและยกเลิก</span></a>
 				</li>
 
 				<li data-slide="6" class="col-sm-1"><a id="menu-link-5" href="./index.html#slide-6"><span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">ติดต่อ</span></a></li>
@@ -293,7 +312,7 @@
     </script>
 	<!-- Header -->
 	<header class="w3-container  w3-center w3-padding-48">
-		<h1 class="w3-margin">ระบบช่วยค้นหาห้อง</h1>
+		<h1 class="w3-margin">ระบบช่วยค้นหาห้องว่าง (บร.2)</h1>
 
 
 		<div class=" w3-padding w3-container">
@@ -302,11 +321,17 @@
 				<div class="w3-display-container w3-padding w3-col l11 m9 ">
 
 					<div class="w3-left-align w3-white w3-padding-16 w3-border" style="border-radius:10px;">
+						<p style="margin-left:25px;font-size:20px;">สามารถค้นหาห้องและจองได้หลายๆห้อง</p>
+						<div style="color:red;font-size:24px">
+							  &nbsp; &nbsp;&nbsp;หมายเหตุ: เครื่องหมาย
+							<temp style="color:red;font-size:36px">*</temp> คือ จำเป็นต้องกรอกข้อมูลในช่อง
+							
+						</div><br>
 						<form action="" target="_blank">
 							<div class="w3-row-padding" style="margin:2 -8px;">
 								<div class="w3-half w3-margin-bottom">
 									<label> <redM style="color:red;font-size:22px;">*</redM> วันที่</label>
-									<input style="font-size:18px; height:45px;" class="w3-input w3-border tcal" id="datep" name="date" type="date" placeholder="DD/MM/YYYY"
+									<input autofocus style="font-size:18px; height:45px;" class="w3-input w3-border tcal" id="datep" name="date" type="date" placeholder="DD/MM/YYYY"
 										required>
 								</div>
 								<div class="w3-half">
@@ -407,7 +432,7 @@
 							<div class="w3-row-padding" style="margin:2 -20px">
 								<div class="w3-row-padding" style="margin:2 -8px;">
 									<div class="w3-half w3-margin-bottom">
-										<label> ชั้น</label>
+										<label> ชั้น (บร.2)</label>
 										<select id="floor" style="font-size:18px; height:45px;" class="w3-input w3-border" name="select">
                                                  <option value=""></option>
                                                 <option value="1">1</option>
@@ -415,12 +440,13 @@
                                                 <option value="3">3</option>
                                             </select>
 									</div>
+									
 								</div>
 							</div>
 							<div class="w3-row-padding" style="margin:2 -20px">
 								<div class="w3-row-padding" style="margin:2 -8px;">
 									<div class="w3-half w3-margin-bottom">
-										<label> ห้อง</label>
+										<label> ห้อง (บร.2)</label>
 										<select id="room" style="font-size:18px; height:45px;" class="w3-input w3-border">
                                                 <option value="all">ทุกห้อง </option>
                                                 <option value="107">107 </option>
@@ -451,19 +477,27 @@
 						<div class="w3-row-padding" style="margin:2 -20px">
 							<div class="w3-row-padding" style="margin:2 -8px;">
 								<div class="w3-row-padding">
-									<div class="w3-col m1">
+									<div class="w3-col m0">
 										&nbsp;
 									</div>
-									<div class="w3-col m10" style="text-align:center">
+									<div class="w3-col m4" style="text-align:center">
 
 
 										<button onclick="window.location.href='schedule.html'" class="button button2">ย้อนกลับ</button>
-										<button onclick="rere()" style="margin:30px;" class="re"> RESET </button>
-										<button class="button button1" id="sear" onClick="clog(this.name)" style="">ค้นหา</button>
-
 
 									</div>
-									<div class="w3-col m1">
+									<div class="w3-col m4" style="text-align:center">
+										&nbsp; <button class="button button1" id="sear" onClick="clog(this.name)" style="">ค้นหา</button>
+										
+									</div>
+									<div class="w3-col m4" style="text-align:center">
+										<button onclick="rere()" class="button button2"> RESET </button>
+										
+									</div>
+
+
+
+									<div class="w3-col m0">
 										&nbsp;
 									</div>
 								</div>
@@ -471,7 +505,7 @@
 						</div>
 
 						<div id="id01" class="modal">
-							<form id="idlog" class="modal-content animate" action="confirm.html" method="POST">
+							<form id="idlog" class="modal-content animate" action="confirmHelp.html" method="POST">
 								<div class="imgcontainer">
 									<span onclick="document.getElementById('id01').style.display='none';document.getElementById('ames').innerHTML=''" class="close"
 										title="Close Modal">&times;</span>
@@ -491,7 +525,7 @@
 									<img src="img/password.png" style="margin-bottom:3px" width="20" height="20" alt="pas"><input class="inputTP" style="font-size:20px"
 										type="password" placeholder=" รหัสผ่าน" name="psw" required><br>
 									<br>
-									<button class="buttonD" type="submit" onclick="setData()">ลงชื่อเข้าใช้</button><br>
+									<button class="buttonD" type="submit" onclick="">ลงชื่อเข้าใช้</button><br>
 									<input class="inputTP" type="checkbox" checked="checked"><br>Remember me
 
 								</div>
@@ -523,15 +557,15 @@
 
 
 
-	<div class="w3-content" style="max-width:1532px;font-size:18px;">
+	<div class="w3-content" style="max-width:12532px;font-size:18px;">
 		<!--Second-->
 		<div id="section2" class="container-fluid">
-			<h1 style="text-align:center;font-size:50px;">ผลการค้นหา</h1>
+			<h1 style="text-align:center;font-size:50px;">ผลการค้นหาห้องว่าง</h1>
 
 			<!-- First Grid -->
 			<div class="container">
 				<h2 style="font-size:25px;">ผลการค้นหาห้องใช้เวลาทั้งหมด
-					<aa id="aa"></aa>  (0.02 วินาที) </h2><br>
+					<aa id="aa"></aa> (0.02 วินาที) </h2><br>
 
 				<style>
 					tr#list:hover {
@@ -564,7 +598,12 @@
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+							<td>
+								<p>ห้อง 107    
+									<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
@@ -572,16 +611,24 @@
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+							<td>
+								<p>ห้อง 107 	<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0"></p>
+							</td>
 						</tr>
-                        
+
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
 							<td> 8/3/2560 </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
 						<tr id="list">
@@ -590,16 +637,29 @@
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
-                        <tr id="list">
+
+
+							<!--
+						<tr id="list">
 							<td> <input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
 							<td> 9/3/2560 </td>
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
@@ -607,16 +667,24 @@
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+							<td>
+								<p>ห้อง 107 	<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0"></p>
+							</td>
 						</tr>
-                        
+
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
 							<td> 9/3/2560 </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
 						<tr id="list">
@@ -625,17 +693,27 @@
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
-						</tr>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
+						</tr> -->
 
-
-                        <tr id="list">
+						<!--
+						<tr id="list">
 							<td> <input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
 							<td> 10/3/2560 </td>
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
@@ -643,16 +721,24 @@
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+							<td>
+								<p>ห้อง 107 <img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0"></p>
+							</td>
 						</tr>
-                        
+
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
 							<td> 10/3/2560 </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 107
+									<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
 						<tr id="list">
@@ -661,16 +747,26 @@
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
-                        <tr id="list">
+						<tr id="list">
 							<td> <input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
 							<td> 11/3/2560 </td>
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
@@ -678,16 +774,24 @@
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+							<td>
+								<p>ห้อง 107 	<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0"></p>
+							</td>
 						</tr>
-                        
+
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
 							<td> 11/3/2560 </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
 						<tr id="list">
@@ -696,16 +800,26 @@
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
-                        <tr id="list">
+						<tr id="list">
 							<td> <input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
 							<td> 12/3/2560 </td>
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
@@ -713,16 +827,24 @@
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+							<td>
+								<p>ห้อง 107 	<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0"></p>
+							</td>
 						</tr>
-                        
+
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
 							<td> 12/3/2560 </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
 						<tr id="list">
@@ -731,22 +853,32 @@
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 60 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 107<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
-						</tr>
+							<td>
+								<p>ห้อง 107
+										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
+						</tr> -->
 
 
 
 
-                        <!--- start room 111 -->
+						<!--- start room 111 -->
 
 
-                        <tr id="list">
+						<tr id="list">
 							<td> <input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
 							<td> 8/3/2560 </td>
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+							<td>
+								<p>ห้อง 111
+										<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
@@ -754,16 +886,24 @@
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+							<td>
+								<p>ห้อง 111 <img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0"></p>
+							</td>
 						</tr>
-                        
+
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
 							<td> 8/3/2560 </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
 						<tr id="list">
@@ -772,16 +912,27 @@
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
-                        <tr id="list">
+						<!--
+						<tr id="list">
 							<td> <input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
 							<td> 9/3/2560 </td>
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
@@ -789,16 +940,24 @@
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+							<td>
+								<p>ห้อง 111 <img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0"></p>
+							</td>
 						</tr>
-                        
+
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันพฤหัส </td>
 							<td> 9/3/2560 </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
 						<tr id="list">
@@ -807,17 +966,29 @@
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
-						</tr>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
+						</tr> 
+						-->
 
 
-                        <tr id="list">
+						<!--
+						<tr id="list">
 							<td> <input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
 							<td> 10/3/2560 </td>
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
@@ -825,16 +996,24 @@
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+							<td>
+								<p>ห้อง 111 <img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0"></p>
+							</td>
 						</tr>
-                        
+
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันศุกร์ </td>
 							<td> 10/3/2560 </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
 						<tr id="list">
@@ -843,16 +1022,26 @@
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
-                        <tr id="list">
+						<tr id="list">
 							<td> <input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
 							<td> 11/3/2560 </td>
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
@@ -860,16 +1049,24 @@
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+							<td>
+								<p>ห้อง 111 <img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0"></p>
+							</td>
 						</tr>
-                        
+
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันเสาร์ </td>
 							<td> 11/3/2560 </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
 						<tr id="list">
@@ -878,16 +1075,26 @@
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
-                        <tr id="list">
+						<tr id="list">
 							<td> <input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
 							<td> 12/3/2560 </td>
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a></p></td>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
@@ -895,16 +1102,24 @@
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111	<a href="#"><span class="glyphicon glyphicon-info-sign"></span>	</a></p></td>
+							<td>
+								<p>ห้อง 111 <img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0"></p>
+							</td>
 						</tr>
-                        
+
 						<tr id="list">
 							<td><input type="checkbox" name="vehicle" value="Bike"> วันอาทิตย์ </td>
 							<td> 12/3/2560 </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
+							<td>
+								<p>ห้อง 111
+								<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
 						</tr>
 
 						<tr id="list">
@@ -913,8 +1128,13 @@
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 50 คน</td>
 							<td> ชั้น 1</td>
-							<td><p>ห้อง 111<a href="#">	<span class="glyphicon glyphicon-info-sign"></span></a>	</p></td>
-						</tr>
+							<td>
+								<p>ห้อง 111
+									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
+												width="20" height="20" border="0">
+								</p>
+							</td>
+						</tr>   -->
 
 
 
@@ -935,7 +1155,7 @@
 
 						<button id="bb" class="button button2">ย้อนกลับ</button>
 						<label style="margin:30px;">&nbsp;</label>
-						<button class="button button1" name="id01" onClick="clog(this.name)">ยืนยันการจอง</button>
+						<button class="button button1" name="id01" onClick="window.location.href = 'confirmHelp.html'">ยืนยันการจอง</button>
 
 
 					</div>
@@ -954,8 +1174,174 @@
 
 		</div>
 
+		<div id="id107" class="modal">
+							<form class="modal-content animate" action="">
+								<div class="imgcontainer">
+									<span onClick="document.getElementById('id107').style.display='none'" class="close" title="Close Modal">&times;</span>
+									<h1>ห้อง 107</h1>
+									<hr>
+								</div>
+
+								<div class="containBig">
+									<img src="img/map107.jpg" width="90%" height="50%"><br><br>
+									<img src="">
+								</div>
+							</form>
+							<!-- form id107-->
+
+						</div>
+						<!-- id107 modal-->
+
+						<div id="id111" class="modal">
+							<form class="modal-content animate" action="">
+								<div class="imgcontainer">
+									<span onClick="document.getElementById('id111').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+									<h1>ห้อง 111</h1>
+									<hr>
+								</div>
+
+								<div class="containBig">
+									<img src="img/map111.jpg" width="90%" height="50%"><br><br>
+									<!-- <img src="img/pickf.png">-->
+								</div>
+							</form>
+							<!-- form id111-->
+						</div>
+						<!-- id111 modal-->
+
+						<div id="id213" class="modal">
+							<form class="modal-content animate" action="">
+								<div class="imgcontainer">
+									<span onClick="document.getElementById('id213').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+									<h1>ห้อง 213</h1>
+									<hr>
+								</div>
+
+								<div class="containBig">
+									<img src="img/map213.jpg" width="90%" height="50%"><br><br>
+
+								</div>
+							</form>
+							<!-- form id213-->
+						</div>
+						<!-- id213 modal-->
+
+
+
+						<div id="id301-1" class="modal">
+							<form class="modal-content animate" action="">
+								<div class="imgcontainer">
+									<span onClick="document.getElementById('id301-1').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+									<h1>ห้อง 301/1</h1>
+									<hr>
+								</div>
+
+								<div class="containBig">
+									<img src="img/map301-1.jpg" width="90%" height="50%"><br><br>
+
+								</div>
+							</form>
+							<!-- form id301-1-->
+						</div>
+						<!-- id301-1 modal-->
+
+						<div id="id301-2" class="modal">
+							<form class="modal-content animate" action="">
+								<div class="imgcontainer">
+									<span onClick="document.getElementById('id301-2').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+									<h1>ห้อง 301/2</h1>
+									<hr>
+								</div>
+
+								<div class="containBig">
+									<img src="img/map301-2.jpg" width="90%" height="50%"><br><br>
+
+								</div>
+							</form>
+							<!-- form id301-2-->
+						</div>
+						<!-- id301-2 modal-->
+
+						<div id="id301-3" class="modal">
+							<form class="modal-content animate" action="">
+								<div class="imgcontainer">
+									<span onClick="document.getElementById('id301-3').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+									<h1>ห้อง 301/3</h1>
+									<hr>
+								</div>
+
+								<div class="containBig">
+									<img src="img/map301-3.jpg" width="90%" height="50%"><br><br>
+
+								</div>
+							</form>
+							<!-- form id301-3-->
+						</div>
+						<!-- id301-3 modal-->
+
+						<div id="id304" class="modal">
+							<form class="modal-content animate" action="">
+								<div class="imgcontainer">
+									<span onClick="document.getElementById('id304').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+									<h1>ห้อง 304</h1>
+									<hr>
+								</div>
+
+								<div class="containBig">
+									<img src="img/map304.jpg" width="90%" height="50%"><br><br>
+
+								</div>
+							</form>
+							<!-- form id304-->
+						</div>
+						<!-- id304 modal-->
+
+						<div id="idr1" class="modal">
+							<form class="modal-content animate" action="">
+								<div class="imgcontainer">
+									<span onClick="document.getElementById('idr1').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+									<h1>ห้องประชุม1</h1>
+									<hr>
+								</div>
+
+								<div class="containBig">
+									<img src="img/mapr1.jpg" width="90%" height="50%"><br><br>
+
+								</div>
+							</form>
+							<!-- form idr1-->
+						</div>
+						<!-- idr1 modal-->
+
+						<div id="idr2" class="modal">
+							<form class="modal-content animate" action="">
+								<div class="imgcontainer">
+									<span onClick="document.getElementById('idr2').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+									<h1>ห้องประชุม2 </h1>
+									<hr>
+								</div>
+
+								<div class="containBig">
+									<img src="img/mapr2.jpg" width="90%" height="50%"><br><br>
+
+								</div>
+							</form>
+							<!-- form idr2-->
+						</div>
+						<!-- idr2 modal-->
+
 
 	</div>
+
+
 
 </body>
 

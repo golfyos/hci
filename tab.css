@@ -26,6 +26,11 @@ h1 {
      border-top-left-radius: 12px;
      border-bottom-right-radius: 0px;
      border-bottom-left-radius: 0px;
+     border:solid black;
+    
+}
+.tabs li:hover{
+    background-color:lightgrey;
     
 }
 
@@ -44,7 +49,7 @@ h1 {
 .tab-pane {
     display: none;
     /*height:725px;*/
-    height:110%;
+    height:125%;
    
 }
 
@@ -52,6 +57,6 @@ h1 {
     display: block;
 }
 .pane2{
-    height: 80%;
+    height: 92%;
 }
 

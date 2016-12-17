@@ -1,5 +1,5 @@
 // Get the modal
-var modal = ["id01","id107", "id111", "id213" , "id304" , "id301-1","id301-2","id301-3","idr1","idr2"];
+var modal = ["id011","id01","id107", "id111", "id213" , "id304" , "id301-1","id301-2","id301-3","idr1","idr2"];
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -103,6 +103,7 @@ function cc(val){
 }
 
 function clog(val){
+    
     document.getElementById(val).style.display='block';
     idtemp = val;
     for(var j=0;j<modal.length;j++){

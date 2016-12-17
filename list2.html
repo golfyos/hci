@@ -160,23 +160,7 @@
 		img {
 			cursor: pointer;
 		}
-		button15{
-			background-color: #4CAF50;
-			/* Green */
-			border: none;
-			color: white;
-			padding: 16px 32px;
-			text-align: center;
-			text-decoration: none;
-			display: inline-block;
-			font-size: 18px;
-			margin: 4px 2px;
-			-webkit-transition-duration: 0.4s;
-			/* Safari */
-			transition-duration: 0.4s;
-			cursor: pointer;
-			width: 180px;
-		}
+		
 		.button {
 			background-color: #4CAF50;
 			/* Green */
@@ -308,7 +292,7 @@
 				<li data-slide="6" class="col-sm-1"><a id="menu-link-5" href="./index.html#slide-6"><span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">ติดต่อ</span></a></li>
 
 				<li data-slide="1" class="col-sm-2">
-					<a id="menu-link-1" href="./scheduleStaff.html"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a>
+					<a id="menu-link-1" href="./index.html#slide-1"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a>
 				</li>
 				<div class="col-sm-0"></div>
 				<div class="col-sm-2" style="text-align:right;font-size:20px;color:white;">คุณสุรีย์ ใจดี (<a href="index.html"style="color:white;cursor:pointer;">Logout</a>)</div>
@@ -348,15 +332,6 @@
 				</tr>
 
 				<tr>
-					<td>9/3/2560</td>
-					<td>8.00-9.30</td>
-					<td>ห้องเรียน</td>
-					<td>60</td>
-					<td>1</td>
-					<td>107</td>
-					<td><img  name="id01"onclick="clog(this.name)"style="width:35px;height:35px;" src="images/delete.png" /></td>
-				</tr>
-				<tr>
 					<td>8/3/2560</td>
 					<td>13.30-15.00</td>
 					<td>ห้องเรียน</td>
@@ -381,16 +356,16 @@
 
 
 	<div id="id01" class="modal">
-		<form name="test" id="idlog" class="modal-content animate" onsubmit="window.location.href='list2.html';return false;" method="POST">
+		<form name="test" id="idlog" class="modal-content animate" onsubmit="getAction(); return false;" method="POST">
 			<div class="imgcontainer" style="margin-top:50px;">
 				<!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
 				<h1>คุณแน่ใจที่จะยกเลิกรายนี้ใช่ไหม</h1>
 				<hr>
 			</div>
 			<div class="containBig" style="margin-bottom:50px;">
-				<button class="button11" type="submit">YES</button>
+				<button class="button11">YES</button>
 				<l style="margin-left:30px; "></l>
-				<aab class="button11" onclick="document.getElementById('id01').style.display='none'" style="background-color:red">NO</aab>
+				<button class="button11" onclick="document.getElementById('id01').style.display='none'" style="background-color:red">NO</button>
 			</div>
 		
 		</form>

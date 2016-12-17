@@ -73,10 +73,11 @@
 				<li data-slide="6" class="col-sm-1"><a id="menu-link-5" href="./index.html#slide-6"><span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">ติดต่อ</span></a></li>
 
 				<li data-slide="1" class="col-sm-2">
-					<a id="menu-link-1" href="./index.html#slide-1"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a>
+					<a id="menu-link-1" href="./scheduleStaff.html"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a>
 				</li>
 				<div class="col-sm-0"></div>
-				<div class="col-sm-2" style="text-align:right;"><a href="#" class="myButton">เข้าสู่ระบบ</a></div>
+				<div id="logindiv" class="col-sm-2" style="text-align:right;"><a name="id011" onClick="clog(this.name)" class="myButton">เข้าสู่ระบบ</a></div>
+				<div id="namediv" class="col-sm-2" style="display:none;text-align:right;font-size:20px;color:white;">คุณสุรีย์ ใจดี (<a href="schedule.html"style="color:white;cursor:pointer;">Logout</a>)</div>
 
 
 			</ul>
@@ -729,15 +730,58 @@
 					</form>
 				</div>
 				<!-- id01 -->
+
+				<div id="id011" class="modal">
+					<form name="test" id="idlog" class="modal-content animate"  onsubmit="loginAction(); return false;" method="POST">
+						<div class="imgcontainer">
+							<span onClick="document.getElementById('id01').style.display='none';document.getElementById('ames').innerHTML=''" class="close"
+								title="Close Modal">&times;</span>
+							<!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+							<h1>ยืนยันตัวตน</h1>
+							<hr>
+						</div>
+						<!-- imgcontainer -->
+						<div class="containBig">
+							<alertmes id="ames"> </alertmes><br>
+							<!--<label><b>ชื่อผู้ใช้</b></label><br>-->
+							<img src="img/user.png" style="margin-bottom:3px" width="20" height="20" alt="us"><input class="inputTP" style="font-size:20px"
+								type="text" placeholder=" ชื่อผู้ใช้" name="uname" required autofocus>
+							<br>
+							<br>
+							<!--<label><b>รหัสผ่าน</b></label><br>-->
+							<img src="img/password.png" style="margin-bottom:3px" width="20" height="20" alt="pas"><input class="inputTP" style="font-size:20px"
+								type="password" placeholder=" รหัสผ่าน" name="psw" required><br>
+							<br>
+							<button class="buttonD" type="submit" >ลงชื่อเข้าใช้</button><br>
+							<input class="inputTP" type="checkbox" checked="checked"><br>Remember me
+
+						</div>
+						<!-- containBig-->
+						<!--<div class="containBig" style="background-color:#f1f1f1">
+                                <button class="buttonD cancelbtn" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>-->
+					</form>
+				</div>
+				<!-- id011 -->
                 <script>
                     function getAction(){
                         if(tabSelect=="tab1"){
-                           
                            window.location.href = "confirm.html";
                         }else if(tabSelect =="tab2"){
                             window.location.href = "confirmForm.html"
                         }
                     }
+
+					var logg = false;
+					function loginAction(){
+						document.getElementById('logindiv').style.display='none';
+						document.getElementById('namediv').style.display='block';
+						document.getElementById('id011').style.display='none';
+						$('body').fadeOut();
+						$('body').fadeIn();
+						logg = true;	
+					}
                 </script>
 			</div>
 			<!--wrapper-->

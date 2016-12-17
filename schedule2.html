@@ -76,8 +76,7 @@
 					<a id="menu-link-1" href="./scheduleStaff.html"> <span class="text" style="color:#FFF;font-size:20px;font-family: 'Mitr', sans-serif;">สำหรับเจ้าหน้าที่</span></a>
 				</li>
 				<div class="col-sm-0"></div>
-				<div class="col-sm-2" style="text-align:right;font-size:20px;color:white;">คุณสุรีย์ ใจดี (<a href="index.html"style="color:white;cursor:pointer;">Logout</a>)</div>
-				
+				<div class="col-sm-2" style="text-align:right;font-size:20px;color:white;">คุณสุรีย์ ใจดี (<a href="schedule.html"style="color:white;cursor:pointer;">Logout</a>)</div>
 
 
 			</ul>
@@ -98,8 +97,6 @@
 			<ul class="tabs">
 				<li style="font-size:28px;" class="tab-link current" data-tab="tab1">บร.2</li>
 				<li style="font-size:28px;" class="tab-link" data-tab="tab2" >อาคารอื่นๆ </li>
-                		<li style="font-size:28px" class="tab-link " data-tab="tab3">แจ้งเตือน</li>
-
 
 			</ul>
             <style>
@@ -130,7 +127,7 @@
                             </select></div>
 							<div class="col-md-5">
 								<div class="wrapperR">
-									<button class="buttonHelp" onClick="window.location.href='helproomStaff.html'"><img src="img/search.png" style="margin-bottom:3px" width="20" height="20"> ระบบช่วยค้นหาห้องว่าง</button>
+									<button class="buttonHelp" onClick="window.location.href='helproom2.html'"><img src="img/search.png" style="margin-bottom:3px" width="20" height="20"> ระบบช่วยค้นหาห้องว่าง</button>
 								</div>
 							</div>
 							<div class="col-md-1"> </div>
@@ -164,12 +161,12 @@
 											<br>
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 60</td>
 									</div>
-									<td class="" id="107-800930">อ.วนิดา<br>CS101</td>
+									<td class="cantTick" id="107-800930"></td>
 									<td class="" id="107-9301100"></td>
 									<td class="" id="107-11001230"></td>
 									<td id="rest"></td>
 									<td class="" id="107-13301500"></td>
-									<td class="" id="107-15001630">อ.ประภาพร<br>CS374</td>
+									<td class="" id="107-15001630"></td>
 									<td class="" id="107-16301800"></td>
 
 								</tr>
@@ -181,8 +178,8 @@
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 50</td>
 									</div>
 									<td class="" id="111-800930"></td>
-									<td class="" id="111-9301100">อ.ประภาพร<br>CS374</td>
-									<td class="" id="111-11001230">อ.ประภาพร<br>CS374</td>
+									<td class="" id="111-9301100"></td>
+									<td class="" id="111-11001230"></td>
 									<td id="rest"></td>
 									<td class="" id="111-13301500"></td>
 									<td class="" id="111-15001630"></td>
@@ -195,7 +192,7 @@
 											<br>
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 50</td>
 									</div>
-									<td class="" id="213-800930">อ.ประภาพร<br>CS374</td>
+									<td class="" id="213-800930"></td>
 									<td class="" id="213-9301100"></td>
 									<td class="" id="213-11001230"></td>
 									<td id="rest"></td>
@@ -257,11 +254,11 @@
 											<img src="img/amount.png" title="ความจุห้อง" style="margin-bottom:3px" width="15" height="15" border="0"> 60</td>
 									</div>
 									<td class="" id="304-800930"></td>
-									<td class="" id="304-9301100"></td>
-									<td class="" id="304-11001230"></td>
+									<td class="cantTick" id="304-9301100"></td>
+									<td class="cantTick" id="304-11001230"></td>
 									<td id="rest"></td>
-									<td class="" id="304-13301500">อ.ณัฐนนท์<br>CS301</td>
-									<td class="" id="304-15001630">อ.ณัฐนนท์<br>CS301</td>
+									<td class="" id="304-13301500"></td>
+									<td class="" id="304-15001630"></td>
 									<td class="" id="304-16301800"></td>
 								</tr>
 								<tr id="r1" class="gAll">
@@ -315,7 +312,7 @@
 						<div class="wrapper">
 							<button class="button button2" onClick="window.location.href='index.html'">ย้อนกลับ</button>
 							<label style="margin:30">&nbsp;</label>
-							<button class="button button1"  name="id01" onClick="window.location.href='confirm.html'">ยืนยันการจอง</button>
+							<button class="button button1"  name="id01" onClick="clog(this.name)">ยืนยันการจอง</button>
 						<br>
 						</div>
 
@@ -670,39 +667,11 @@
 					<div class="wrapper">
 							<button class="button button2" onClick="window.location.href='index.html'">ย้อนกลับ</button>
 							<label style="margin:30">&nbsp;</label>
-							<button class="button button1"  name="id01" onClick="window.location.href ='confirmForm.html'">ยืนยันการจอง</button>
+							<button class="button button1"  name="id01" onClick="window.location.href ='confirmForm2.html'">ยืนยันการจอง</button>
 						<br>
 					</div>
 				</div>
 				<!--end tab pane2-->
-
-
-                <!-- start tab pane3-->
-				<div class="tab-pane pane3" id="tab3">
-					<h2>กล่องข้อความเข้า</h2><br>
-					<div class="container">
-						<div class="row">
-							<div class="col-sm-2"></div>
-							<table class="col-sm-8">
-							<tr style="width:100%;background-color:#FFF">
-								<td>ห้อง 107 &nbsp;&nbsp; วันที่ 12/10/2017 &nbsp;&nbsp; เวลา 13:30-15:00 &nbsp;&nbsp;พี่ลูกแก้ว</td>
-                                <td><img style="width:35px;height:35px;" src="images/delete.png" /></td>
-							</tr>
-							<tr style="width:100%;background-color:#FFF">
-								<td>ห้อง 213 &nbsp;&nbsp; วันที่ 08/03/2017 &nbsp;&nbsp; เวลา 8:00-11:00 &nbsp;&nbsp;อ.ประภาพร</td>
-                                <td><img style="width:35px;height:35px;" src="images/delete.png" /></td>
-							</tr>
-							<tr style="width:100%;background-color:#FFF">
-								<td>ห้อง 111 &nbsp;&nbsp; วันที่ 08/03/2017 &nbsp;&nbsp; เวลา 8:00-11:00 &nbsp;&nbsp;อ.มนวรรัตน์</td>
-                                <td><img style="width:35px;height:35px;" src="images/delete.png" /></td>
-							</tr>
-
-							
-							</table>
-							<div class="col-sm-2"></div>
-						</div><!--row-->
-					</div><!--container-->
-				</div>
 			</div>
 			<!--tab content-->
 		</div>
@@ -760,58 +729,15 @@
 					</form>
 				</div>
 				<!-- id01 -->
-
-				<div id="id011" class="modal">
-					<form name="test" id="idlog" class="modal-content animate"  onsubmit="loginAction(); return false;" method="POST">
-						<div class="imgcontainer">
-							<span onClick="document.getElementById('id01').style.display='none';document.getElementById('ames').innerHTML=''" class="close"
-								title="Close Modal">&times;</span>
-							<!--<img src="img_avatar2.png" alt="Avatar" class="avatar">-->
-							<h1>ยืนยันตัวตน</h1>
-							<hr>
-						</div>
-						<!-- imgcontainer -->
-						<div class="containBig">
-							<alertmes id="ames"> </alertmes><br>
-							<!--<label><b>ชื่อผู้ใช้</b></label><br>-->
-							<img src="img/user.png" style="margin-bottom:3px" width="20" height="20" alt="us"><input class="inputTP" style="font-size:20px"
-								type="text" placeholder=" ชื่อผู้ใช้" name="uname" required autofocus>
-							<br>
-							<br>
-							<!--<label><b>รหัสผ่าน</b></label><br>-->
-							<img src="img/password.png" style="margin-bottom:3px" width="20" height="20" alt="pas"><input class="inputTP" style="font-size:20px"
-								type="password" placeholder=" รหัสผ่าน" name="psw" required><br>
-							<br>
-							<button class="buttonD" type="submit" >ลงชื่อเข้าใช้</button><br>
-							<input class="inputTP" type="checkbox" checked="checked"><br>Remember me
-
-						</div>
-						<!-- containBig-->
-						<!--<div class="containBig" style="background-color:#f1f1f1">
-                                <button class="buttonD cancelbtn" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
-                                <span class="psw">Forgot <a href="#">password?</a></span>
-                            </div>-->
-					</form>
-				</div>
-				<!-- id011 -->
                 <script>
                     function getAction(){
                         if(tabSelect=="tab1"){
+                           
                            window.location.href = "confirm.html";
                         }else if(tabSelect =="tab2"){
                             window.location.href = "confirmForm.html"
                         }
                     }
-
-					var logg = false;
-					function loginAction(){
-						document.getElementById('logindiv').style.display='none';
-						document.getElementById('namediv').style.display='block';
-						document.getElementById('id011').style.display='none';
-						$('body').fadeOut();
-						$('body').fadeIn();
-						logg = true;	
-					}
                 </script>
 			</div>
 			<!--wrapper-->

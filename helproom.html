@@ -480,18 +480,18 @@
 									<div class="w3-col m0">
 										&nbsp;
 									</div>
-									<div class="w3-col m4" style="text-align:center">
+									<div class="w3-col m6" style="text-align:center">
 
 
 										<button onclick="window.location.href='schedule.html'" class="button button2">ย้อนกลับ</button>
 
 									</div>
-									<div class="w3-col m4" style="text-align:center">
+									<div class="w3-col m6" style="text-align:center">
 										&nbsp; <button class="button button1" id="sear" onClick="clog(this.name)" style="">ค้นหา</button>
 										
 									</div>
-									<div class="w3-col m4" style="text-align:center">
-										<button onclick="rere()" class="button button2"> RESET </button>
+									<div class="w3-col m0" style="text-align:center">
+									<!--		<button onclick="rere()" class="button button2"> RESET </button> -->
 										
 									</div>
 
@@ -572,77 +572,79 @@
 						background-color: gray;
 					}
 				</style>
-				<input onclick="toggleCheckBox(this)" type="checkbox" name="optiona" id="selectAll" unchecked />
+				<!--<input onclick="toggleCheckBox(this)" type="checkbox" name="optiona" id="selectAll" unchecked />
 				<span class="checkboxtext">
                                         เลือกทั้งหมด
-                                    </span>
+                                    </span> -->
 				<table id="table_id" class="display" style="color:black">
 
 					<thead>
 
 						<tr>
 
-							<th>วัน </th>
+							
 							<th> วันที่ </th>
+							<th> วัน </th>
 							<th> เวลา </th>
 							<th> ความจุห้อง </th>
-							<th> ชั้น </th>
 							<th> ห้อง </th>
+							<th> ชั้น </th>							
 						</tr>
 					</thead>
 					<tbody>
 						<!--first line-->
 						<tr id="list">
-							<td> <input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
-							<td>8/3/2560</td>
+							<td><input type="checkbox" name="vehicle" value="Bike"> 8/3/2560</td>							
+							<td>  วันพุธ </td>
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 60 คน</td>
-							<td> ชั้น 1</td>
 							<td>
 								<p>ห้อง 107    
 									<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 								</p>
 							</td>
+							<td> ชั้น 1</td>
+							
 						</tr>
 						<tr id="list">
-							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
-							<td> 8/3/2560 </td>
+							<td><input type="checkbox" name="vehicle" value="Bike"> 8/3/2560 </td>
+							<td> วันพุธ </td>							
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 60 คน</td>
-							<td> ชั้น 1</td>
 							<td>
 								<p>ห้อง 107 	<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0"></p>
 							</td>
+							<td> ชั้น 1</td>							
 						</tr>
 
 						<tr id="list">
-							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
-							<td> 8/3/2560 </td>
+							<td><input type="checkbox" name="vehicle" value="Bike"> 8/3/2560 </td>							
+							<td> วันพุธ </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 60 คน</td>
-							<td> ชั้น 1</td>
 							<td>
 								<p>ห้อง 107
 										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 								</p>
 							</td>
+							<td> ชั้น 1</td>							
 						</tr>
 
 						<tr id="list">
-							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
-							<td> 8/3/2560 </td>
+							<td><input type="checkbox" name="vehicle" value="Bike"> 8/3/2560 </td>							
+							<td> วันพุธ </td>
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 60 คน</td>
-							<td> ชั้น 1</td>
 							<td>
 								<p>ห้อง 107
 										<img name="id107" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 								</p>
 							</td>
+							<td> ชั้น 1</td>							
 						</tr>
 
 
@@ -868,56 +870,59 @@
 
 
 						<tr id="list">
-							<td> <input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
-							<td> 8/3/2560 </td>
+							<td> <input type="checkbox" name="vehicle" value="Bike"> 8/3/2560 </td>							
+							<td>  วันพุธ </td>
 							<td> เวลา 8:00-9:30</td>
 							<td> ความจุห้อง 50 คน</td>
-							<td> ชั้น 1</td>
 							<td>
 								<p>ห้อง 111
 										<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 								</p>
 							</td>
+							<td> ชั้น 1</td>
+							
 						</tr>
 						<tr id="list">
-							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
-							<td> 8/3/2560 </td>
+							<td><input type="checkbox" name="vehicle" value="Bike"> 8/3/2560 </td>
+							<td> วันพุธ </td>
 							<td> เวลา 9:30-11:00</td>
 							<td> ความจุห้อง 50 คน</td>
-							<td> ชั้น 1</td>
 							<td>
 								<p>ห้อง 111 <img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0"></p>
 							</td>
+							<td> ชั้น 1</td>
+							
 						</tr>
 
 						<tr id="list">
-							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
-							<td> 8/3/2560 </td>
+							<td><input type="checkbox" name="vehicle" value="Bike"> 8/3/2560 </td>
+							<td> วันพุธ </td>
 							<td> เวลา 11:00-12:30</td>
 							<td> ความจุห้อง 50 คน</td>
-							<td> ชั้น 1</td>
 							<td>
 								<p>ห้อง 111
 									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 								</p>
 							</td>
+							<td> ชั้น 1</td>
+							
 						</tr>
 
 						<tr id="list">
-							<td><input type="checkbox" name="vehicle" value="Bike"> วันพุธ </td>
-							<td> 8/3/2560 </td>
+							<td><input type="checkbox" name="vehicle" value="Bike"> 8/3/2560 </td>							
+							<td> วันพุธ </td>
 							<td> เวลา 13:30-15:00</td>
 							<td> ความจุห้อง 50 คน</td>
-							<td> ชั้น 1</td>
 							<td>
 								<p>ห้อง 111
 									<img name="id111" onClick="cc(this.name)" src="img/info-button.png" title="รายละเอียดเพิ่มเติม" class="imgClick"
 												width="20" height="20" border="0">
 								</p>
 							</td>
+							<td> ชั้น 1</td>							
 						</tr>
 
 						<!--
